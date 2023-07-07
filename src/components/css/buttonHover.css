@@ -1,0 +1,29 @@
+.parent {
+
+}
+.child {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  font-size: 32px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.5s ease-in-out; /** Firefox **/
+  -o-transition: all 0.5s ease-in-out; /** Opera **/
+  transform: translate(-20px, 0);
+}
+.parent:hover > .child {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(5px, 0);
+  -webkit-transform: translate(5px, 0); /** Chrome & Safari **/
+  -o-transform: translate(5px, 0); /** Opera **/
+  -moz-transform: translate(5px, 0); /** Firefox **/
+}
+
+.parent:not(:hover) > .child {
+
+    opacity: 0; /* Element unsichtbar machen, wenn nicht gehovert wird */
+    transform: translate(-20px, 0);
+    transition: opacity 0s, visibility 0s; /* Übergang auf 0 Sekunden setzen */
+  }
