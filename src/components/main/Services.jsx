@@ -20,29 +20,54 @@ import software from "../../images/services/software.webp";
 import support from "../../images/services/support.webp";
 import { HeadLine } from "../HeadLine";
 
-export function Services({ ...rest }) {
+export function Services({ input, headline, ...rest }) {
   const services = [
     {
-      name: "Individuelle Software Lösungen",
-      text: "Wir erstellen in Zusammenarbeit mit unseren Kunden individuelle Softwarelösungen, um deren Effizienz zu maximieren.",
+      ...input[0],
       image: software,
     },
 
     {
-      name: "Unternehmens Analyse",
-      text: "Unser Expertenteam analysiert Ihr Geschäftsfeld, um mögliche Chancen und Risiken zu identifizieren und optimal zu nutzen.",
+      ...input[1],
       image: business,
     },
 
     {
-      name: "Mitarbeiterschulung",
-      text: "Wir entwickeln individuelle Schulungen für Ihre Mitarbeiter im Bereich der IT und machen sie fit für die Welt von morgen.",
+      ...input[2],
       image: coworker,
     },
 
     {
-      name: "Support",
-      text: "Wir stehen Ihnen ständig mit einem Team von Experten zur Verfügung, um Ihnen online oder persönlich vor Ort bei jeder Art von IT-Problemen zu helfen.",
+      ...input[3],
+      image: support,
+    },
+    {
+      ...input[4],
+      image: support,
+    },
+    {
+      ...input[5],
+      image: support,
+    },
+
+    {
+      ...input[6],
+      image: support,
+    },
+    {
+      ...input[7],
+      image: support,
+    },
+    {
+      ...input[8],
+      image: support,
+    },
+    {
+      ...input[9],
+      image: support,
+    },
+    {
+      ...input[10],
       image: support,
     },
   ];
@@ -59,40 +84,42 @@ export function Services({ ...rest }) {
       <HeadLine
         text={
           <Text>
-            <b>Wie können wir dein Unternehmen unterstützen?</b>
+            <b>{headline}</b>
           </Text>
         }
       />
-      <Wrap justify={"center"} pt={spacingTop} px={paddingX} spacing={"75px"}>
+      <Wrap justify={"center"} pt={spacingTop} px={paddingX} spacing={"25px"}>
         {services.map((service, index) => {
-          return (
-            <WrapItem key={index}>
-              <Card
-                h={variant === "md" && 450}
-                w={variant === "md" ? 270 : "90vw"}
-              >
-                <Image
-                  src={service.image}
-                  w={"100%"}
-                  h={"45%"}
-                  borderTopRadius={5}
-                />
-                {/* </CardHeader> */}
-                <CardBody>
-                  <Stack h={"100%"}>
-                    <Heading textAlign={"center"} size={"md"}>
-                      {service.name}
-                    </Heading>
-                    <Spacer />
-                    <Text /* pt={2} */ textAlign={"center"}>
-                      {service.text}
-                    </Text>
-                    <Spacer />
-                  </Stack>
-                </CardBody>
-              </Card>
-            </WrapItem>
-          );
+          if (service?.name != undefined) {
+            return (
+              <WrapItem key={index}>
+                <Card
+                  h={variant === "md" && 220}
+                  w={variant === "md" ? 220 : "90vw"}
+                >
+                  <Image
+                    src={service.image}
+                    w={"100%"}
+                    h={"75%"}
+                    borderTopRadius={5}
+                  />
+                  {/* </CardHeader> */}
+                  <CardBody>
+                    <Stack h={"100%"}>
+                      <Heading textAlign={"center"} size={"md"}>
+                        {service.name}
+                      </Heading>
+                      <Spacer />
+                      <Text /* pt={2} */ textAlign={"center"}>
+                        {service.text}
+                      </Text>
+                      <Spacer />
+                    </Stack>
+                  </CardBody>
+                </Card>
+              </WrapItem>
+            );
+          }
         })}
       </Wrap>
     </Box>

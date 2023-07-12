@@ -7,10 +7,10 @@ export function CallToAction() {
   const text = useBreakpointValue({
     base: "Jetzt Termin vereinbaren",
     sm: "Jetzt Termin vereinbaren",
-    md: "Jetzt unverbindlichen Termin vereinbaren",
+    md: "Termin vereinbaren",
   });
   return (
-    <Center py={spacingTop}>
+    <Center>
       <ActionButton text={text} />
     </Center>
   );

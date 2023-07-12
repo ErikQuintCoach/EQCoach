@@ -10,100 +10,60 @@ import {
 } from "@chakra-ui/react";
 import { AboutText } from "./AboutText";
 import "../css/About.css";
-import richard from "../../images/richard.webp";
-import gerrit from "../../images/gerrit.webp";
+import erik_quint from "../../images/erik_quint.jpg";
 
 import { useContaxt } from "../../context/Context";
 import { HeadLine } from "../HeadLine";
 
-export function About({...rest}) {
+export function About({ ...rest }) {
   const variant = useBreakpointValue({
     base: "base",
     sm: "sm",
     md: "md",
     lg: "lg",
   });
+  const { textCollection } = useContaxt();
 
   return (
-
-      <Box {...rest}>
-        <HeadLine
-          text={
-            <Text>
-              Die Gesichter hinter <b>JD IT Consulting</b>
-            </Text>
-          }
-        />
-        <AboutText
-          w={1100}
-          textWidth={["90vw", "90vw", "90vw", "500px"]}
-          side={"left"}
-          name={"Richard Dahms"}
-          image={
-            <Image
-              boxShadow={variant !== "base" && "17px 17px 0px 5px #000000"}
-              src={richard}
-              w={variant !== "base" ? "350px" : "90vw"}
-              borderRadius={10}
-            />
-          }
-          text={
-            <Text /* maxW={"50vw"} */>
-              Mit mehr als 5 Jahren Berufserfahrung in der IT und Beratung habe
-              ich erkannt, wie wichtig die Unterstützung im Bereich der
-              Digitalisierung für heutige Unternehmen ist.
-              <br /> <br />
-              Mit der Gründung von JD IT Consulting möchte ich mein in den
-              letzten Jahren erworbenes Wissen mit unseren Kunden teilen, um
-              effizienter und gleichzeitig entspannter zu arbeiten.
-              <br /> <br />
-              Mit mehr als 5 Jahren Berufserfahrung in der IT und Beratung habe
-              ich erkannt, wie wichtig die Unterstützung im Bereich der
-              Digitalisierung für heutige Unternehmen ist.
-              <br /> <br />
-              Mit der Gründung von JD IT Consulting möchte ich mein in den
-              letzten Jahren erworbenes Wissen mit unseren Kunden teilen, um
-              effizienter und gleichzeitig entspannter zu arbeiten.
-            </Text>
-          }
-        />
-
-        <AboutText
-          w={1100}
-          textWidth={["90vw", "90vw", "90vw", "500px"]}
-          side={"right"}
-          name={"Gerrit Jürgensen"}
-          image={
-            <Image
-              boxShadow={variant !== "base" && "17px 17px 0px 5px #000000"}
-              src={gerrit}
-              w={variant !== "base" ? "350px" : "90vw"}
-              borderRadius={10}
-            />
-          }
-          text={
-            <Text /* maxW={"50vw"} */>
-              Mit mehr als 4 Jahren Erfahrung im Produktmanagement von
-              IT-Produkten und Kundenberatung wurde mir klar, dass viele
-              Unternehmen Optimierungs- und Digitalisierungsmöglichkeiten bei
-              weitem nicht ausreizen.
-              <br /> <br />
-              Diese Möglichkeiten aufzeigen ist mein Antrieb und war die
-              treibende Kraft mit meinem Partner die JD IT Consulting zu
-              gründen.
-              <br /> <br />
-              Mit mehr als 4 Jahren Erfahrung im Produktmanagement von
-              IT-Produkten und Kundenberatung wurde mir klar, dass viele
-              Unternehmen Optimierungs- und Digitalisierungsmöglichkeiten bei
-              weitem nicht ausreizen.
-              <br /> <br />
-              Diese Möglichkeiten aufzeigen ist mein Antrieb und war die
-              treibende Kraft mit meinem Partner die JD IT Consulting zu
-              gründen.
-            </Text>
-          }
-        />
-      </Box>
-
+    <Box {...rest}>
+      <HeadLine
+        text={
+          <Text>
+            Meine <b>Mission</b> mit ai for everyone
+          </Text>
+        }
+      />
+      <AboutText
+        w={1100}
+        textWidth={["90vw", "90vw", "90vw", "500px"]}
+        side={"right"}
+        image={
+          <Image
+            boxShadow={variant !== "base" && "17px 17px 0px 5px #000000"}
+            src={erik_quint}
+            w={variant !== "base" ? "350px" : "90vw"}
+            borderRadius={10}
+          />
+        }
+        text={
+          <Text /* maxW={"50vw"} */>
+            Als passionierter Schnelllerner und Wissensvermittler habe ich mein
+            Leben der Förderung des Lernens gewidmet. Mit einem fundierten
+            Hintergrund in Betriebswirtschaft, und meinem aktuellen Studium der
+            Psychologie mache ich IT-Themen für Nicht-ITler verständlich und
+            zugänglich. <br /> <br />
+            Mein Ziel ist es, Menschen und Unternehmen dabei zu helfen, in der
+            KI-Ära zu glänzen. <b>Niemand soll zurück bleiben.</b> <br /> <br />
+            Ein zentraler Bestandteil meiner Mission ist es, Bildung
+            zugänglicher zu machen.
+            <b>
+              Mit jeder Unternehmensbuchung wird eine kostenlose Schulung für
+              Schulen finanziert, wodurch sie dazu beitragen, die Welt zu einem
+              besseren Ort zu machen.
+            </b>
+          </Text>
+        }
+      />
+    </Box>
   );
 }

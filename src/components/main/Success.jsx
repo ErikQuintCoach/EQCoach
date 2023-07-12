@@ -12,13 +12,13 @@ import {
 } from "@chakra-ui/react";
 import { ActionButton } from "../ActionButton";
 import zitat from "../../images/Zitat-1.png";
-import mainImage from "../../images/process.webp";
+import mainImage from "../../images/nachhilfe_schüler_am_tisch.jpg";
 import { BiSearchAlt, BiLineChart } from "react-icons/bi";
 import { MdOutlineSettingsInputComponent } from "react-icons/md";
 import { HeadLine } from "../HeadLine";
 import { useContaxt } from "../../context/Context";
 
-export function Success({...rest}) {
+export function Success({ ...rest }) {
   const { spacingTop, paddingX } = useContaxt();
   const variant = useBreakpointValue({
     base: "base",
@@ -30,20 +30,20 @@ export function Success({...rest}) {
     {
       image: zitat,
       icon: <BiSearchAlt size={48} />,
-      title: "1. Analyse",
-      text: " Wir sehen uns zunächst an, wie dein Unternehmen aktuell in den verschiedenen Bereichen aufgestellt ist. Sobald geklärt ist, ob und wie dein Vertrieb funktioniert, deine Mitarbeiter*innen aufgestellt sind und natürlich auch, wie es um dich steht, gehen wir zum Optimierungsschritt.",
+      title: "1. Online Nachhilfe",
+      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,",
     },
     {
       image: zitat,
       icon: <MdOutlineSettingsInputComponent size={48} />,
-      title: "2. Optimierung",
-      text: " Durch unsere jahrelange Expertise erkennen wir etwaige Probleme in deinem Unternehmen: Mit der 1:1 Strategie, die wir individuell für dich erstellen, ist es dir möglich, die „blinden Flecken“ auszumerzen. Sei es die Änderung der Unternehmensform, eine Reform deines Vertriebsprozesses oder eine generelle Umstrukturierung: Wir stehen an deiner Seite.",
+      title: "2. Vorort Nachhilfe",
+      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,",
     },
     {
       image: zitat,
       icon: <BiLineChart size={48} />,
-      title: "3. Umsetzung",
-      text: "Auch während der Umsetzung deines „Schlachtplans“ stehen wir dir zur Verfügung. Bei etwaigen Fragen, Problemen oder Anregungen haben wir stets ein offenes Ohr und greifen dir bestmöglich unter die Arme. Da unsere Experten in den verschiedensten Bereichen unterwegs sind, hast du bei jedem Anliegen einen passenden Ansprechpartner.",
+      title: "3. Ferienkurse",
+      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,",
     },
   ];
 
@@ -65,18 +65,14 @@ export function Success({...rest}) {
                 <CardHeader pt={"10px"}>
                   <HStack>
                     {info.icon}
-                    <Text
-                      fontSize={"20px"}
-                      fontWeight={"bold"}
-                      pl={"10px"}
-                    >
+                    <Text fontSize={"20px"} fontWeight={"bold"} pl={"10px"}>
                       {info.title}
                     </Text>
                   </HStack>
                 </CardHeader>
                 <CardBody mt={"-30px"}>
                   <Text
-                                        textAlign={variant === "base" && "center"}
+                    textAlign={variant === "base" && "center"}
                     pl={
                       variant === "lg" && "50px"
                     } /* fontWeight={"hairline"} */
@@ -108,35 +104,35 @@ export function Success({...rest}) {
 
   return (
     <Box {...rest}>
-        <HeadLine
-          text={
-            <Text>
-              Unsere <b>Vorgehensweise</b> für euren unternehmerischen{" "}
-              <b>Erfolg</b>
-            </Text>
-          }
-        />
-        <Center w={"100%"} mt={spacingTop}>
-          {variant === "lg" ? (
-            <HStack spacing={10} px={paddingX}>
-              <Stack>
-                <ImageBox />
-                <ActionButton />
-              </Stack>
-              <Content />
-            </HStack>
-          ) : (
-            <Stack spacing={5} px={paddingX}>
+      <HeadLine
+        text={
+          <Text>
+            Unsere <b>Lernmethoden</b> für euren {" "}
+            <b>Erfolg</b>
+          </Text>
+        }
+      />
+      <Center w={"100%"} mt={spacingTop}>
+        {variant === "lg" ? (
+          <HStack spacing={10} px={paddingX}>
+            <Stack>
               <ImageBox />
-              <Stack spacing={5}>
-                <Content />
-                <Center>
-                  <ActionButton /* w={["100%", "70%", "100%", "60%"]} */ />
-                </Center>
-              </Stack>
+              <ActionButton />
             </Stack>
-          )}
-        </Center>
+            <Content />
+          </HStack>
+        ) : (
+          <Stack spacing={5} px={paddingX}>
+            <ImageBox />
+            <Stack spacing={5}>
+              <Content />
+              <Center>
+                <ActionButton /* w={["100%", "70%", "100%", "60%"]} */ />
+              </Center>
+            </Stack>
+          </Stack>
+        )}
+      </Center>
     </Box>
   );
 }

@@ -1,19 +1,22 @@
 export const services = [
     {
-        name: "Leistungen",
-        ref: "services",
+        name: "Start",
+        ref: "header",
     },
     {
-        name: "Zusammenarbeit",
-        ref: "cooperation",
+        name: "Informationen",
+        ref: "infos",
     },
     {
-        name: "Das Team",
-        ref: "team",
+        name: "Mission",
+        ref: "mission",
     },
-
     {
-        name: "Vorgehensweise",
-        ref: "ablauf",
+        name: "Angebote",
+        ref: "offers",
+    },
+    {
+        name: "Kontakt",
+        ref: "contact",
     },
 ];

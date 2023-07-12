@@ -12,6 +12,7 @@ export function ActionButton(props) {
   const {
     ml,
     link = "https://calendly.com/jd-it-consulting/erstgespraech",
+    text = "Termin vereinbaren",
     ...rest
   } = props;
 
@@ -39,7 +40,7 @@ export function ActionButton(props) {
           className="parent"
           {...rest}
         >
-          Termin vereinbaren
+          {text}
           {show && <MdKeyboardArrowRight className="child" size={32} />}
         </Button>
       </a>

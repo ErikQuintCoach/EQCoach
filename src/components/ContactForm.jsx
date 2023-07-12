@@ -37,7 +37,7 @@ const ContactData = ({ height, width, call, setCall }) => {
           color="white"
           borderRadius={5}
           onClick={() => {
-            window.location = "tel:01723287188";
+            window.location = "tel:015233670645";
           }}
         >
           <Center w={"100%"} h={"100%"}>
@@ -48,18 +48,18 @@ const ContactData = ({ height, width, call, setCall }) => {
           <Text
             cursor={"pointer "}
             onClick={() => {
-              window.location = "tel:01723287188";
+              window.location = "tel:015233670645";
             }}
             fontSize={variant === "base" ? 20 : 26}
             fontWeight="bold"
           >
             {" "}
-            + 49 (0) 0172 / 3287188
+            +49 152 33670645
           </Text>
-          <Text fontSize={variant === "base" ? 18 : 22} color="gray" w={230}>
+{/*           <Text fontSize={variant === "base" ? 18 : 22} color="gray" w={230}>
             {" "}
             Mo. - So. 10:00 - 22:00
-          </Text>
+          </Text> */}
         </Stack>
       </HStack>
     );
@@ -75,7 +75,7 @@ const ContactData = ({ height, width, call, setCall }) => {
           color="white"
           cursor={"pointer"}
           onClick={() => {
-            window.location = "mailto:info@jd-it-consulting.de";
+            window.location = "mailto:info@lernhilfe-club.de";
           }}
           borderRadius={5}
         >
@@ -85,7 +85,7 @@ const ContactData = ({ height, width, call, setCall }) => {
         </Box>
         <Text
           onClick={() => {
-            window.location = "mailto:info@jd-it-consulting.de";
+            window.location = "mailto:info@lernhilfe-club.de";
           }}
           fontSize={variant === "base" ? 18 : 26}
           fontWeight="bold"
@@ -94,10 +94,10 @@ const ContactData = ({ height, width, call, setCall }) => {
             <>
               info@
               {/* <br /> */}
-              jd-it-consulting.de
+              lernhilfe-club.de
             </>
           ) : (
-            <>info@jd-it-consulting.de</>
+            <>info@lernhilfe-club.de</>
           )}
         </Text>
       </HStack>
@@ -172,12 +172,12 @@ export function ContactForm() {
           </Text>
         )}
         <Box
-          fontSize={[23, 27, 40, 40, 50]}
-          width={variant === "lg" && "15ch"}
+          fontSize={[23, 27, 40, 40, 42]}
+          width={variant === "lg" && "16ch"}
           letterSpacing={[-2, -2, -3, -3]}
         >
           {" "}
-          WIR FREUEN UNS AUF IHR PROJEKT
+          WIR FREUEN UNS AUF SIE
         </Box>
         {variant === "lg" && (
           <ContactData

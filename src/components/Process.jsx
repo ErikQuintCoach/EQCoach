@@ -72,8 +72,8 @@ const ContentCard = ({ index, spacings, process, processes, width }) => {
   );
 };
 
-export function Process({...rest}) {
-  const { color, spacingTop } = useContaxt();
+export function Process({ ...rest }) {
+  const { color, spacingTop, textCollection } = useContaxt();
   const variant = useBreakpointValue({
     base: "base",
     sm: "sm",
@@ -82,30 +82,26 @@ export function Process({...rest}) {
   });
   const processes = [
     {
+      ...textCollection.processes[0],
       icon: <BsCalendar2WeekFill size={48} />,
-      name: "Terminanfrage",
-      text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
       image: software,
     },
 
     {
+      ...textCollection.processes[1],
       icon: <MdPhoneInTalk size={48} />,
-      name: "Vorgespräch",
-      text: "Einer unserer Mitarbeiter spricht telefonisch mit Ihnen über Ihr Anliegen und weist Ihnen den richtigen Ansprechpartner zu.",
       image: business,
     },
 
     {
+      ...textCollection.processes[2],
       icon: <BsPersonVideo3 size={48} />,
-      name: "Virtuelles Beratungsgespräch",
-      text: "Ein Strategieberater berät sie 60 Minuten individuell zu Ihrer Situation und entwickelt gemeinsam mit Ihnen eine Lösung für Ihr Problem.",
       image: coworker,
     },
 
     {
+      ...textCollection.processes[3],
       icon: <TfiReload size={48} />,
-      name: "Langfristige Zusammenarbeit",
-      text: "Im Anschluss an die Erstberatung besteht die Option, dass wir sie langfristig bei der Umsetzung Ihrer Lösung begleiten.",
       image: support,
     },
   ];

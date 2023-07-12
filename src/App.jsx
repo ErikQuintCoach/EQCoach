@@ -16,6 +16,10 @@ import { Process } from "./components/Process";
 import ContactForm from "./components/ContactForm";
 import { Footer } from "./components/Footer";
 import bottom from "./images/bottom.webp";
+import { useContaxt } from "./context/Context";
+import { Offers } from "./components/Offers";
+import { MainInfo } from "./components/main/MainInfo";
+import { InfoMaterial } from "./components/InfoMaterial";
 
 export function App() {
   const variant = useBreakpointValue({
@@ -24,6 +28,8 @@ export function App() {
     md: "md",
     lg: "lg",
   });
+
+  const { textCollection, spacingTop } = useContaxt();
 
   return (
     <>
@@ -35,7 +41,7 @@ export function App() {
         {variant === "lg" && (
           <>
             <Spacer />
-            <Header position={"absolute"} top={0}  />
+            <Header position={"absolute"} top={0} />
             <Spacer />
           </>
         )}
@@ -43,26 +49,26 @@ export function App() {
           <>
             <Stack pt={`${(4 / 6) * 100}vw`} h={"100vh"}>
               <Spacer />
-              <Header mt={"25px"}/>
+              <Header mt={"25px"} />
               <Spacer />
             </Stack>
           </>
         )}
       </Box>
       {variant !== "lg" && <Box h={variant === "base" ? "85vh" : "70vh"} />}
-      <Stack pt={["0px", "0px", "0px", "100px"]}>
-        <Services id={"services"} />
-        {/*         <CallToAction />
-        <Testimonials /> */}
+      <Stack spacing={spacingTop} pt={["0px", "0px", "0px", "100px"]}>
+        <MainInfo />
         <CallToAction />
-        <Process id={"cooperation"} />
+        <InfoMaterial id={"info"} />
+        <About id={"mission"} />
+        <Offers id={"offers"} />
         <CallToAction />
-        <About id={"team"} />
-        <CallToAction />
-        <Success id={"ablauf"} />
-        {/* {variant === "lg" && <CallToAction />} */}
-
-        <Box backgroundImage={bottom} h={1270} backgroundRepeat={"no-repeat"}>
+        <Box
+          id={"contact"}
+          backgroundImage={bottom}
+          h={1270}
+          backgroundRepeat={"no-repeat"}
+        >
           <Center h={"100%"}>
             <ContactForm />
           </Center>

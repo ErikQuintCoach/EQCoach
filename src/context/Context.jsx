@@ -4,10 +4,108 @@ const Context = createContext({});
 
 export const ContextProvider = ({ children }) => {
   const [color, setColor] = useState({
-    buttonColor: "#5da2df",
-    mainColor: "#5da2df",
+    buttonColor: "#c07fff",
+    mainColor: "#c07fff",
     secondButton: "#9E9E9EBA",
   });
+
+  const textCollection = {
+    header: [
+      "Nachhilfe 2.0",
+      "Für Norddeutschland",
+      "Kiel, Rendsburg, Flensburg und mehr",
+      "Mit unserer Unterstützung zu besseren Noten",
+    ],
+    processes: [
+      {
+        name: "Kennlern- & Beratungstermin",
+        text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
+      },
+      {
+        name: "Indentifikation der Lernschwächen",
+        text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
+      },
+      {
+        name: "Regelmäßiger Unterricht",
+        text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
+      },
+      {
+        name: "Lernmaterialien",
+        text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
+      },
+    ],
+    subjectHeadline: "In diesen Fächern können wir euch unterstützen",
+    subjects: [
+      {
+        name: "Mathe",
+        text: "",
+      },
+      {
+        name: "Physik",
+        text: "",
+      },
+      {
+        name: "Informatik",
+        text: "",
+      },
+      {
+        name: "Chemie",
+        text: "",
+      },
+      {
+        name: "WiPo",
+        text: "",
+      },
+      {
+        name: "Geschichte",
+        text: "",
+      },
+      {
+        name: "Grafik/Design",
+        text: "",
+      },
+      {
+        name: "Kunst/Zeichnen",
+        text: "",
+      },
+      {
+        name: "BWL",
+        text: "",
+      },
+      {
+        name: "Technik",
+        text: "",
+      },
+      /*       {
+        name: "Medizin",
+        text: "",
+      }, */
+    ],
+    languagesHeadline: "Wir unterrichten auch folgende Sprachen",
+    languages: [
+      {
+        name: "Deutsch",
+        text: "",
+      },
+      {
+        name: "Englisch",
+        text: "",
+      },
+      {
+        name: "Französisch",
+        text: "",
+      },
+      {
+        name: "Latein",
+        text: "",
+      },
+      {
+        name: "Spanisch",
+        text: "",
+      },
+    ],
+    aboutHeader: "Unsere Mission beim ",
+  };
 
   const paddingX = [3, 3, 3, 3];
   const spacingTop = ["30px", "40px", "50px", "40px", "100px"];
@@ -19,6 +117,7 @@ export const ContextProvider = ({ children }) => {
       value={{
         spacingTop,
         paddingX,
+        textCollection,
         color,
         setColor,
       }}

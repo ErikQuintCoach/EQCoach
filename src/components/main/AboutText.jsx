@@ -30,13 +30,13 @@ export function AboutText(props) {
           w={textWidth}
           color={"black"}
           fontWeight={"bold"}
-          fontSize={"25px"} /* fontWeight={"hairline"} */
+          fontSize={"25px"}
         >
           {name}
         </Text>
         <Text
           w={textWidth}
-          color={"gray.500"}
+          color={"gray.800"}
           fontSize={"18px"} /* fontWeight={"hairline"} */
         >
           {text}

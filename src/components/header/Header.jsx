@@ -11,7 +11,7 @@ import { useContaxt } from "../../context/Context";
 import { ActionButton } from "../ActionButton";
 
 export function Header({ ...rest }) {
-  const { color, paddingX } = useContaxt();
+  const { color, paddingX, textCollection } = useContaxt();
   const variant = useBreakpointValue({
     base: "base",
     sm: "sm",
@@ -23,8 +23,7 @@ export function Header({ ...rest }) {
     <>
       <Box w={"100%"} zIndex={100} px={paddingX} {...rest}>
         <Center pt={variant === "lg" && "150px"}>
-          <Box
-          >
+          <Box>
             <Text
               color={"black"}
               fontSize={"16px"}
@@ -37,33 +36,45 @@ export function Header({ ...rest }) {
               py={variant === "lg" && 5}
               px={variant === "lg" && 10}
             >
-              JD IT Consulting
+              ai for everyone
             </Text>
             <br />
             <Stack
-            spacing={0}
+              spacing={0}
               fontSize={["25px", "36px", "48px", "48px", "64px"]}
               fontWeight={"bold"}
             >
-              <Text display={variant === "lg" && "inline-block"} bgColor={"white"} borderTopRightRadius={variant === "lg" && "25px"} pt={variant === "lg" && 5} px={variant === "lg" && 10}>
-                Wir automatisieren,
+              <Text
+                display={variant === "lg" && "inline-block"}
+                bgColor={"white"}
+                borderTopRightRadius={variant === "lg" && "25px"}
+                pt={variant === "lg" && 5}
+                px={variant === "lg" && 10}
+              >
+                ChatGPT-Online Seminar:
               </Text>
-              <Text display={variant === "lg" && "inline-block"} bgColor={"white"} borderBottomRightRadius={variant === "lg" && "25px"} pb={variant === "lg" && 5} px={variant === "lg" && 10}>
-                du schaffst mehr!
+              <Text
+                display={variant === "lg" && "inline-block"}
+                bgColor={"white"}
+                borderBottomRightRadius={variant === "lg" && "25px"}
+                pb={variant === "lg" && 5}
+                px={variant === "lg" && 10}
+              >
+                Ihr Weg zur KI-Kompetenz!
               </Text>
             </Stack>
 
             <Text
               bgColor={"white"}
               borderBottomRadius={"25px"}
-              py={variant === "lg" && 5}
+              pb={variant === "lg" && 5}
               px={variant === "lg" && 10}
               pt={"10px"}
               fontSize={"18px"}
               fontWeight={"black"}
               display={variant === "lg" && "inline-block"}
             >
-              Mit uns Schritt-für-Schritt zu deinem Erfolg
+              für Führungskräfte und Unternehmer
             </Text>
             <br></br>
             {variant === "base" ? (
