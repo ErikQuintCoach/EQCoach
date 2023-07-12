@@ -26,46 +26,39 @@ export function Imprint() {
           IMPRESSUM
         </Heading>
         <Box h={1} w={120} bgColor={color.mainColor} />
-        <Text fontWeight={"extrabold"}>JD IT Consulting Gbr</Text>
+        <Text fontWeight={"extrabold"}>Aiforeveryone</Text>
         <Text>
-          Lise-Meitner-Ring 30
+          Wiesekamp 2
           <br />
-          D-23843 Bad Oldesloe
+          24226 Heikendorf
           <br />
-          Germany
+          Deutschland
         </Text>
         <br />
         <HStack
           _hover={{ color: color.mainColor }}
           cursor={"pointer"}
-          onClick={() => (window.location = "tel:01723287188")}
+          onClick={() => (window.location = "tel:017631009017")}
         >
           <ImMobile size={25} />
-          <Text fontSize={20}>+ 49 (0) 0172 / 3287188 </Text>
+          <Text fontSize={20}>+ 49 17631009017 </Text>
         </HStack>
         <HStack
           _hover={{ color: color.mainColor }}
           cursor={"pointer"}
-          onClick={() => (window.location = "mailto:info@jd-it-consulting.de")}
+          onClick={() => (window.location = "mailto:kontakt@aiforeveryone.de")}
         >
           <AiOutlineMail size={25} />
-          <Text>info@jd-it-consulting.de</Text>
+          <Text>kontakt@aiforeveryone.de</Text>
         </HStack>
         <br />
         <Text>
           Vertretungsberechtigt:
           <br />
-          Richard Johann Constantin Dahms
-          <br />
-          Gerrit Jürgensen
+          Erik Quint
         </Text>
         <br />
-        <Text>
-          {/* Amtsgericht Kiel - HRB 3988 */}
-          {/* <br />
-          USt - IdNr.: DE XXX XX XX XX <br />
-          Steuer-Nr. XX/XXX/XX/XXX Finanzamt Kiel-Süd */}
-        </Text>
+        <Text></Text>
         <br />
         <br />
         <Text fontSize={[25, 25, 30, 35]}>HAFTUNGSHINWEIS</Text>
@@ -85,7 +78,7 @@ export function Imprint() {
         <br />
         <Text>
           WebWerk am Meer <br />
-          Werbe- und Marketingagentur
+          Webdesign- und Marketingagentur
           <br />
           <br />
           <HStack

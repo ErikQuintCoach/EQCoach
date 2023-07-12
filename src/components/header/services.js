@@ -5,7 +5,7 @@ export const services = [
     },
     {
         name: "Informationen",
-        ref: "infos",
+        ref: "info",
     },
     {
         name: "Mission",

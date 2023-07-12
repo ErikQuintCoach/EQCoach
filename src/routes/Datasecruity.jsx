@@ -51,10 +51,10 @@ export function Datasecruity() {
           </Box>
         </Heading>
         <Text textAlign={"left"}>
-          Gerrit Jürgensen
+          Erik Quint
           <br />
-          info@jd-it-consulting.de
-          <br />+ 49 (0) 0172 / 3287188
+          kontakt@aiforeveryone.de
+          <br />+ 49 17631009017
         </Text>
 
         <Heading
@@ -596,10 +596,10 @@ export function Datasecruity() {
           E-Mail{" "}
           <span>
             <a
-              aria-label={`Nehme Kontakt zu JD IT Consulting per Email auf`}
-              href="mailto: widerspruch@jd-it-consulting.de"
+              aria-label={`Nehme Kontakt zu AI for Everyone per Email auf`}
+              href="mailto: widerspruch@aiforeveryone.de"
             >
-              widerspruch@jd-it-consulting.de
+              widerspruch@aiforeveryone.de
             </a>
           </span>
           .

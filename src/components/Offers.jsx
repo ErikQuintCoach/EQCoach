@@ -51,17 +51,25 @@ export function Offers({ ...rest }) {
         text={
           <Text /* maxW={"50vw"} */>
             <br />
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At <br /> <br />
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At <br /> <br />
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At <br /> <br />
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            erat, sed diam voluptua. At <br /> <br />
+            Diese Schulung für Führungskräfte und Unternehmer bietet einen
+            tiefgreifenden Einblick in die Welt der KI und insbesondere in die
+            Nutzung von ChatGPT. Sie benötigen keinerlei IT-Vorkenntnisse. Wir
+            bringen Ihnen bei, wie Sie ChatGPT effektiv in Ihrem Unternehmen
+            einsetzen können, um Arbeitsabläufe zu optimieren und Ihre{" "}
+            Geschäftsziele zu erreichen . Sie lernen auch, die Grenzen der KI zu
+            erkennen und wie Sie sicherstellen können, dass sie ethisch und
+            verantwortungsvoll eingesetzt wird.
+            <br /> <br />
+            <b>
+              Bonus: Darüber hinaus unterstützt jede Buchung unserer Schulung
+              das kostenlose Unterrichten an Schulen, was bedeutet, dass Sie
+              nicht nur in Ihr Unternehmen, sondern auch in die nächste
+              Generation von Führungskräften investieren. Ganz nach dem Motto Ai
+              for everyone.
+            </b>
+            <br /> <br />
+            Bei Fragen stehe ich ihnen gerne zur Verfügung.
+            <br /> <br />
             <ActionButton text={"Erstgespräch vereinbaren"} w={"100%"} />
           </Text>
         }

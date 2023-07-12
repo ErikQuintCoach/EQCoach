@@ -37,7 +37,7 @@ const ContactData = ({ height, width, call, setCall }) => {
           color="white"
           borderRadius={5}
           onClick={() => {
-            window.location = "tel:015233670645";
+            window.location = "tel:017631009017";
           }}
         >
           <Center w={"100%"} h={"100%"}>
@@ -48,15 +48,15 @@ const ContactData = ({ height, width, call, setCall }) => {
           <Text
             cursor={"pointer "}
             onClick={() => {
-              window.location = "tel:015233670645";
+              window.location = "tel:017631009017";
             }}
             fontSize={variant === "base" ? 20 : 26}
             fontWeight="bold"
           >
             {" "}
-            +49 152 33670645
+            +49 176 31009017
           </Text>
-{/*           <Text fontSize={variant === "base" ? 18 : 22} color="gray" w={230}>
+          {/*           <Text fontSize={variant === "base" ? 18 : 22} color="gray" w={230}>
             {" "}
             Mo. - So. 10:00 - 22:00
           </Text> */}
@@ -75,7 +75,7 @@ const ContactData = ({ height, width, call, setCall }) => {
           color="white"
           cursor={"pointer"}
           onClick={() => {
-            window.location = "mailto:info@lernhilfe-club.de";
+            window.location = "mailto:kontakt@aiforeveryone.de";
           }}
           borderRadius={5}
         >
@@ -85,19 +85,15 @@ const ContactData = ({ height, width, call, setCall }) => {
         </Box>
         <Text
           onClick={() => {
-            window.location = "mailto:info@lernhilfe-club.de";
+            window.location = "mailto:kontakt@aiforeveryone.de";
           }}
           fontSize={variant === "base" ? 18 : 26}
           fontWeight="bold"
         >
           {variant === "base" ? (
-            <>
-              info@
-              {/* <br /> */}
-              lernhilfe-club.de
-            </>
+            <>kontakt@aiforeveryone.de</>
           ) : (
-            <>info@lernhilfe-club.de</>
+            <>kontakt@aiforeveryone.de</>
           )}
         </Text>
       </HStack>
