@@ -4,8 +4,8 @@ const Context = createContext({});
 
 export const ContextProvider = ({ children }) => {
   const [color, setColor] = useState({
-    buttonColor: "#c07fff",
-    mainColor: "#c07fff",
+    /* mainColor: "#0077b6", */
+    mainColor: "#023e8a",
     secondButton: "#9E9E9EBA",
   });
 

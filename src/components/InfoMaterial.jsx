@@ -13,29 +13,29 @@ import { useContaxt } from "../context/Context";
 import { ActionButton } from "./ActionButton";
 import { HeadLine } from "./HeadLine";
 
-export function InfoMaterial({...rest}) {
+export function InfoMaterial({ ...rest }) {
   const infos = [
     {
       title: "MIT: ChatGPT steigert Produktivität um 37% - gleiche Qualität",
       description: `Dieser Effizienzgewinn wurde mit einem "Industriellen Revolution-Level" verglichen.`,
-      link: "https://www.aiforeveryone.de/_files/ugd/9c8d93_548209a639844d00a248a75fc19bf403.pdf",
+      link: "https://www.aiforeveryone.de/studien/Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence.pdf",
     },
     {
       title: "Italien: 50% weniger Output durch Verbot von ChatGPT",
       description: `Die unbeabsichtigten Folgen der Zensur digitaler Technologie - 
         Untersucht wurde der Output von 8000 Programmierern.`,
-      link: "https://www.aiforeveryone.de/_files/ugd/9c8d93_cd08663c75144edca042006b4a1ac4fc.pdf",
+      link: "https://www.aiforeveryone.de/studien/Die unbeabsichtigten Folgen der Zensur digitaler Technologie.pdf",
     },
     {
       title: "ChatGPT Schulung verringert Ängste",
       description: `GPT-Schulungen reduzieren Ängste der Mitarbeiter und steigern gleichzeitig ihre Bereitschaft, dieses Tool effektiv zu nutzen.`,
-      link: "https://www.aiforeveryone.de/_files/ugd/9c8d93_548209a639844d00a248a75fc19bf403.pdf",
+      link: "https://www.aiforeveryone.de/studien/Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence.pdf",
     },
   ];
 
   const { spacingTop } = useContaxt();
 
-  const InfoCard = ({ info, title, description }) => {
+  const InfoCard = ({ info,link, title, description }) => {
     return (
       <Card h={400} maxW={400}>
         <CardHeader textAlign={"center"} h={130}>
@@ -46,6 +46,7 @@ export function InfoMaterial({...rest}) {
             <Text>{description}</Text>
             <Spacer />
             <ActionButton
+            link={link}
               text={"Zur Studie"}
               h={"50px"}
               fontSize={"15px"}

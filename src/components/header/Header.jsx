@@ -7,6 +7,7 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { BsFillCheckSquareFill } from "react-icons/bs";
 import { useContaxt } from "../../context/Context";
 import { ActionButton } from "../ActionButton";
 
@@ -18,6 +19,20 @@ export function Header({ ...rest }) {
     md: "md",
     lg: "lg",
   });
+
+  const Benefit = ({ text }) => {
+    return (
+      <HStack>
+        <BsFillCheckSquareFill />
+        <Text fontSize={"22px"}>{text}</Text>
+      </HStack>
+    );
+  };
+  const benefits = [
+    "automatisieren Sie einfache Arbeitsabläufe",
+    "Steigern Sie die Qualität ihres Outputs",
+    "Steigern Sie produktivität",
+  ];
 
   return (
     <>
@@ -41,7 +56,7 @@ export function Header({ ...rest }) {
             <br />
             <Stack
               spacing={0}
-              fontSize={["25px", "36px", "48px", "48px", "64px"]}
+              fontSize={["25px", "36px", "48px", "48px", "56px"]}
               fontWeight={"bold"}
             >
               <Text
@@ -60,7 +75,7 @@ export function Header({ ...rest }) {
                 pb={variant === "lg" && 5}
                 px={variant === "lg" && 10}
               >
-                Ihr Weg zur KI-Kompetenz!
+                Nutzen Sie das mächtigste KI-Tool effektiv
               </Text>
             </Stack>
 
@@ -71,10 +86,19 @@ export function Header({ ...rest }) {
               px={variant === "lg" && 10}
               pt={"10px"}
               fontSize={"18px"}
-              fontWeight={"black"}
+              fontWeight={"extrabold"}
               display={variant === "lg" && "inline-block"}
             >
               für Führungskräfte und Unternehmer
+              <br />
+              <br />
+              {benefits.map((benefit, i) => {
+                return (
+                  <Box key={i}>
+                    <Benefit text={benefit} />
+                  </Box>
+                );
+              })}
             </Text>
             <br></br>
             {variant === "base" ? (

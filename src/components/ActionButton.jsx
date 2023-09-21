@@ -33,8 +33,8 @@ export function ActionButton(props) {
           textAlign={"center"}
           borderRadius={"50vh"}
           color={"white"}
-          bg={color.buttonColor}
-          _hover={{ bgColor: color.buttonColor }}
+          bg={color.mainColor}
+          _hover={{ bgColor: color.mainColor }}
           textTransform={"uppercase"}
           letterSpacing={2}
           className="parent"

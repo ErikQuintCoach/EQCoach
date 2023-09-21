@@ -57,9 +57,7 @@ export function About({ ...rest }) {
             Ein zentraler Bestandteil meiner Mission ist es, Bildung
             zugänglicher zu machen.
             <b>
-              Mit jeder Unternehmensbuchung wird eine kostenlose Schulung für
-              Schulen finanziert, wodurch sie dazu beitragen, die Welt zu einem
-              besseren Ort zu machen.
+            Mit jeder Unternehmensbuchung unterstützen Sie maßgeblich die Schulung von Lehrkräften und tragen so dazu bei, diese Welt zu einem besseren Ort zu machen.
             </b>
           </Text>
         }

@@ -16,6 +16,7 @@ import nachhilfe_schülerin_tafel from "../images/nachhilfe_schülerin_an_tafel.
 import { useContaxt } from "../context/Context";
 import { HeadLine } from "./HeadLine";
 import { ActionButton } from "./ActionButton";
+import { ShowStudyContent } from "./ShowStudyContent";
 
 export function Offers({ ...rest }) {
   const variant = useBreakpointValue({
@@ -68,12 +69,13 @@ export function Offers({ ...rest }) {
               for everyone.
             </b>
             <br /> <br />
-            Bei Fragen stehe ich ihnen gerne zur Verfügung.
+            Bei Fragen stehe ich Ihnen gerne zur Verfügung.
             <br /> <br />
             <ActionButton text={"Erstgespräch vereinbaren"} w={"100%"} />
           </Text>
         }
       />
+      {/*  <ShowStudyContent pt={7} w={1100} /> */}
 
       <AboutText
         w={1100}
@@ -90,18 +92,36 @@ export function Offers({ ...rest }) {
         }
         text={
           <Text /* maxW={"50vw"} */>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At
+            <b>Zielgruppe: Lehrkräfte aller Fachbereiche ab der 5ten Klasse.</b>
+            <br />
+            <b>Dauer: 90 Minuten</b>
             <br /> <br />
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At
+            Diese kostenlose Schulung ist unser Beitrag, um
+            Bildungseinrichtungen in der digitalen Ära zu unterstützen. Sie
+            richtet sich speziell an Lehrkräfte, die ihre Kenntnisse in KI
+            erweitern und ihren Schülern eine fundierte, zukunftsorientierte
+            Bildung ermöglichen möchten. Bitte beachten Sie, dass aufgrund der
+            hohen Nachfrage eine Warteliste besteht. Durch die Buchungen von
+            Unternehmen für unsere bezahlten Schulungen können wir diese
+            kostenlosen Schulungen für Schulen ermöglichen. Kein Vorwissen
+            erforderlich. Wir freuen uns darauf, Sie auf dieser spannenden Reise
+            zu begleiten.
             <br /> <br />
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At
+            <b>Kompetenzen, die Sie erwerben:</b>
+            <br />
+            - Verständnis für KI-Grundlagen und speziell ChatGPT <br />-
+            Erkennung von Möglichkeiten und Grenzen von ChatGPT im Schulalltag{" "}
+            <br />- Entwicklung effektiver Prompts für die Interaktion mit
+            ChatGPT <br />- Anwendung von ChatGPT in praktischen
+            Bildungsszenarien <br />- Einhaltung von Best Practices für den
+            Einsatz von ChatGPT im Unterricht <br />- Bewusstsein für ethische
+            und datenschutzrechtliche Aspekte beim Einsatz von KI in der
+            Bildung."
             <br /> <br />
+            <b>
+              Vorrausetzung: mindesten 8 interessierte Lehrkräfte und Sitzt in
+              Schleswig Holstein
+            </b>
             <ActionButton text={"Erstgespräch vereinbaren"} w={"100%"} />
           </Text>
         }
