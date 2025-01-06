@@ -1,25 +1,26 @@
-import { useState, useRef, useEffect } from 'react';
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ExternalLinkIcon,
+} from "@chakra-ui/icons";
 import {
   Box,
+  Button,
   Card,
-  Text,
+  Center,
   Flex,
   IconButton,
-  useBreakpointValue,
-  Center,
-  Link,
-  Button,
-  useColorModeValue,
   Image,
-  Heading,
-} from '@chakra-ui/react';
-import { ChevronLeftIcon, ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons';
+  Link,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import { useEffect, useRef, useState } from "react";
 
-// Import images directly
-import MarcusImage from '../images/Marcus_42_image.jpg';
-import ElaineImage from '../images/Elaine_Foto.jpg';
-import VeronikaImage from '../images/Veronika_Bild.jpg';
-import LisaImage from '../images/Lisa_Foto.jpg';
+import ElaineImage from "../images/Elaine_Foto.jpg";
+import LisaImage from "../images/Lisa_Foto.jpg";
+import MarcusImage from "../images/Marcus_42_image.jpg";
+import VeronikaImage from "../images/Veronika_Bild.jpg";
 
 export function TestimonialCarousel({ testimonials }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,12 +28,11 @@ export function TestimonialCarousel({ testimonials }) {
   const carouselRef = useRef(null);
   const variant = useBreakpointValue({ base: 1, md: 2, lg: 3 });
   const touchStartX = useRef(null);
-  const bgOverlay = useColorModeValue('rgba(255, 255, 255, 0)', 'rgba(0, 0, 0, 0)');
 
   const toggleText = (index) => {
-    setHiddenTextIndices(prev => ({
+    setHiddenTextIndices((prev) => ({
       ...prev,
-      [index]: !prev[index]
+      [index]: !prev[index],
     }));
   };
 
@@ -51,7 +51,7 @@ export function TestimonialCarousel({ testimonials }) {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
     setHiddenTextIndices({});
@@ -81,11 +81,15 @@ export function TestimonialCarousel({ testimonials }) {
   const renderTile = (testimonial, index) => {
     const hasImage = Boolean(testimonial.image);
     const isHidden = hiddenTextIndices[index];
-    const imageSrc = testimonial.title.includes('Marcus') ? MarcusImage 
-    : testimonial.title.includes('Elaine') ? ElaineImage 
-    : testimonial.title.includes('Veronika') ? VeronikaImage 
-    : testimonial.title.includes('Lisa') ? LisaImage 
-    : testimonial.image;
+    const imageSrc = testimonial.title.includes("Marcus")
+      ? MarcusImage
+      : testimonial.title.includes("Elaine")
+      ? ElaineImage
+      : testimonial.title.includes("Veronika")
+      ? VeronikaImage
+      : testimonial.title.includes("Lisa")
+      ? LisaImage
+      : testimonial.image;
 
     return (
       <Box
@@ -94,8 +98,12 @@ export function TestimonialCarousel({ testimonials }) {
         px={2}
         minH="400px"
         position="relative"
-        cursor="pointer"
-        onClick={() => toggleText(index)}
+        cursor={!testimonial.link && "pointer"}
+        onClick={() => {
+          if (!testimonial.link) {
+            toggleText(index);
+          }
+        }}
       >
         <Card
           h="400px"
@@ -117,13 +125,13 @@ export function TestimonialCarousel({ testimonials }) {
               opacity={1}
             />
           )}
-          
+
           {/* Always visible title */}
-          <Text 
+          <Text
             position="absolute"
             top={4}
             left={4}
-            fontSize="xl" 
+            fontSize="xl"
             fontWeight="bold"
             color="black"
             bg="rgba(255, 255, 255, 0.9)"
@@ -142,7 +150,7 @@ export function TestimonialCarousel({ testimonials }) {
             left={0}
             right={0}
             bottom={0}
-            bg={isHidden ? "transparent" : "transparent"} 
+            bg={isHidden ? "transparent" : "transparent"}
             zIndex={1}
             transition="all 0.3s ease"
             display="flex"
@@ -152,26 +160,26 @@ export function TestimonialCarousel({ testimonials }) {
             p={6}
             opacity={isHidden ? 0 : 1}
           >
-            <Text 
+            <Text
               textAlign="center"
               color="black"
-              bg="rgba(255, 255, 255, 0.9)" 
+              bg="rgba(255, 255, 255, 0.9)"
               p={4}
               borderRadius="md"
               mt={12}
-              boxShadow="lg" 
+              boxShadow="lg"
               fontWeight="semibold"
-              maxW="90%" 
+              maxW="90%"
             >
               {testimonial.description}
             </Text>
 
             {testimonial.link && (
-              <Link 
-                href={testimonial.link} 
+              <Link
+                href={testimonial.link}
                 isExternal
                 mt={4}
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: "none" }}
               >
                 <Button
                   rightIcon={<ExternalLinkIcon />}
@@ -185,23 +193,26 @@ export function TestimonialCarousel({ testimonials }) {
           </Box>
 
           {/* Click Instruction */}
-          <Text
-            position="absolute"
-            bottom={4}
-            left="50%"
-            transform="translateX(-50%)"
-            color="white"
-            fontSize="sm"
-            bg="rgba(0, 0, 0, 0.5)"
-            px={3}
-            py={1}
-            borderRadius="full"
-            opacity={isHidden ? 0 : 0.8}
-            transition="opacity 0.3s ease"
-            zIndex={2}
-          >
-            Klicken zum Ausblenden
-          </Text>
+          {!testimonial?.link && (
+            <Text
+              position="absolute"
+              bottom={4}
+              left="50%"
+              textAlign={"center"}
+              transform="translateX(-50%)"
+              color="white"
+              fontSize="sm"
+              bg="rgba(0, 0, 0, 0.5)"
+              px={3}
+              py={1}
+              borderRadius="full"
+              opacity={isHidden ? 0 : 0.8}
+              transition="opacity 0.3s ease"
+              zIndex={2}
+            >
+              Klicken zum Ausblenden
+            </Text>
+          )}
         </Card>
       </Box>
     );
@@ -214,16 +225,6 @@ export function TestimonialCarousel({ testimonials }) {
 
   return (
     <Box position="relative" width="100%" overflow="hidden">
-      <Heading
-        as="h2"
-        textAlign="center"
-        mb={8}
-        fontSize="3xl"
-        fontWeight="bold"
-        color="black"
-      >
-        Feedback Karussell
-      </Heading>
       <Flex
         ref={carouselRef}
         onTouchStart={handleTouchStart}
@@ -234,11 +235,12 @@ export function TestimonialCarousel({ testimonials }) {
         px={4}
         gap={4}
       >
-        {getVisibleIndices().map((index) => renderTile(testimonials[index], index))}
+        {getVisibleIndices().map((index) =>
+          renderTile(testimonials[index], index)
+        )}
       </Flex>
 
-      {/* Navigation Buttons */}
-      <Center mt={6}>
+      <Center mt={6} pb={3}>
         <IconButton
           aria-label="Previous slide"
           icon={<ChevronLeftIcon boxSize={6} />}
@@ -248,8 +250,8 @@ export function TestimonialCarousel({ testimonials }) {
           colorScheme="blue"
           size="lg"
           _hover={{
-            transform: 'scale(1.1)',
-            boxShadow: 'lg',
+            transform: "scale(1.1)",
+            boxShadow: "lg",
           }}
           transition="all 0.2s"
         />
@@ -261,8 +263,8 @@ export function TestimonialCarousel({ testimonials }) {
           colorScheme="blue"
           size="lg"
           _hover={{
-            transform: 'scale(1.1)',
-            boxShadow: 'lg',
+            transform: "scale(1.1)",
+            boxShadow: "lg",
           }}
           transition="all 0.2s"
         />
@@ -270,29 +272,3 @@ export function TestimonialCarousel({ testimonials }) {
     </Box>
   );
 }
-
-// Example usage:
-// <TestimonialCarousel 
-//   testimonials={[
-//     {
-//       title: "Marcus, 42",
-//       description: "Das Coaching war sehr wertvoll und hilfreich für meine persönliche Entwicklung. Erik hat mir geholfen, neue Perspektiven zu entdecken.",
-//       image: MarcusImage
-//     },
-//     {
-//       title: "Elaine, 21",
-//       description: "Ich habe mich während des gesamten Coachings sehr wohl und sicher gefühlt. Erik schafft eine vertrauensvolle Atmosphäre.",
-//       image: ElaineImage
-//     },
-//     {
-//       title: "Veronika, 29",
-//       description: "Eine bereichernde und transformierende Erfahrung! Erik schafft einen Raum, in dem man offen reflektieren kann. Durch seine klaren, gezielten Fragen und empathische Art sind wir in eine Tiefe vorgedrungen, die nachhaltige Veränderungen ermöglicht hat. Absolut empfehlenswert!",
-//       image: VeronikaImage
-//     },
-//     {
-//       title: "Coaching is effective!",
-//       description: "Wissenschaftliche Studien zeigen die Wirksamkeit von Coaching bei der persönlichen Entwicklung.",
-//       link: "https://example.com"
-//     }
-//   ]}
-// />
