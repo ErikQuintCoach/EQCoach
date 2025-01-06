@@ -1,12 +1,11 @@
 import {
-  Text,
-  Heading,
-  Stack,
-  ListItem,
   Box,
+  Heading,
+  ListItem,
+  Stack,
+  Text,
   UnorderedList,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
 import { useContaxt } from "../context/Context";
 
 export function Datasecruity() {
@@ -53,7 +52,7 @@ export function Datasecruity() {
         <Text textAlign={"left"}>
           Erik Quint
           <br />
-          erik_quint@yahoo.de
+          moin@erikquint.de
           <br />+ 49 17631009017
         </Text>
 
@@ -597,9 +596,9 @@ export function Datasecruity() {
           <span>
             <a
               aria-label={`Schreib mir eine E-Mail`}
-              href="mailto: erik_quint@yahoo.de"
+              href="mailto: moin@erikquint.de"
             >
-              erik_quint@yahoo.de
+              moin@erikquint.de
             </a>
           </span>
           .

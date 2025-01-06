@@ -75,7 +75,7 @@ const ContactData = ({ height, width, call, setCall }) => {
           color="white"
           cursor={"pointer"}
           onClick={() => {
-            window.location = "mailto:erik_quint@yahoo.de";
+            window.location = "mailto:moin@erikquint.de";
           }}
           borderRadius={5}
         >
@@ -85,16 +85,12 @@ const ContactData = ({ height, width, call, setCall }) => {
         </Box>
         <Text
           onClick={() => {
-            window.location = "mailto:erik_quint@yahoo.de";
+            window.location = "mailto:moin@erikquint.de";
           }}
           fontSize={variant === "base" ? 18 : 26}
           fontWeight="bold"
         >
-          {variant === "base" ? (
-            <>erik_quint@yahoo.de</>
-          ) : (
-            <>erik_quint@yahoo.de</>
-          )}
+          {variant === "base" ? <>moin@erikquint.de</> : <>moin@erikquint.de</>}
         </Text>
       </HStack>
     );

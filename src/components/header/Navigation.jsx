@@ -19,15 +19,13 @@ import { useNavigate } from "react-router";
 
 export function Navigation({ refs }) {
   const { color } = useContaxt();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const variant = useBreakpointValue({
     base: "base",
     sm: "sm",
     md: "md",
     lg: "lg",
   });
-
-
 
   function executeScroll(ref) {
     const element = document.getElementById(ref);
@@ -46,15 +44,14 @@ export function Navigation({ refs }) {
         w={"100%"}
         bg={"white"}
         h={["70px", "90px", "90px", "90px"]}
-        px={[5, 7, "100px", "100px"]}
-        zIndex={9999}
+        px={[5, 7, "60px", "60px"]}
+        zIndex={5}
         position={"fixed"}
         top={0}
         borderBottomColor={color.mainColor}
         borderBottomWidth={0.3}
         boxShadow={`0px -1px 10px 2px ${color.mainColor}`}
       >
- {/* <Image src={logo} h={"50px"} />*/}       
         <Spacer />
         {variant === "lg" ? (
           <>
@@ -63,8 +60,7 @@ export function Navigation({ refs }) {
                 <HeaderLink
                   key={i}
                   service={service}
-                  onClick={() => 
-                  {
+                  onClick={() => {
                     navigate("/");
                     setTimeout(() => {
                       executeScroll(service.ref);

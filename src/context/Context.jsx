@@ -1,3 +1,4 @@
+import { useBreakpointValue } from "@chakra-ui/react";
 import { useState, useContext, useEffect, useRef, createContext } from "react";
 
 const Context = createContext({});
@@ -7,7 +8,7 @@ export const ContextProvider = ({ children }) => {
     /* Previous colors */
     previousMainColor: "#00b4d8", // Hellerer Türkiston
     previousSecondButton: "#9E9E9EBA",
-    
+
     /* New colors */
     mainColor: "#CF7F00", // New main color
     secondButton: "#9E9E9EBA", // Keeping second button the same
@@ -114,16 +115,25 @@ export const ContextProvider = ({ children }) => {
   const paddingX = [3, 3, 3, 3];
   const spacingTop = ["30px", "40px", "50px", "40px", "100px"];
 
-  // 0px 30px 60px 0px rgba(53,66,85,0.1) box shadow middle
+  const variant = useBreakpointValue({
+    base: "base",
+    sm: "sm",
+    md: "md",
+    lg: "lg",
+  });
+
+  console.warn("Variant :", variant);
 
   return (
     <Context.Provider
       value={{
         spacingTop,
+        variant,
         paddingX,
         textCollection,
         color,
         setColor,
+        isSmartphone: variant === "base",
       }}
     >
       {children}

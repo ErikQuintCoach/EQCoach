@@ -1,33 +1,25 @@
-import {
-  Box,
-  Center,
-  HStack,
-  Stack,
-  Spacer,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Center, HStack, Stack, Text } from "@chakra-ui/react";
+import headerBackground from "../../images/header.jpg";
 import { BsFillCheckSquareFill } from "react-icons/bs";
 import { useContaxt } from "../../context/Context";
-import { ActionButton } from "../ActionButton";
 
-export function Header({ ...rest }) {
-  const { color, paddingX, textCollection } = useContaxt();
-  const variant = useBreakpointValue({
-    base: "base",
-    sm: "sm",
-    md: "md",
-    lg: "lg",
-  });
+export function Header() {
+  const { color } = useContaxt();
 
   const Benefit = ({ text }) => {
     return (
       <HStack>
-        <BsFillCheckSquareFill />
-        <Text fontSize={["14px", "22px", "22px", "22px"]}>{text}</Text>
+        <BsFillCheckSquareFill color={color.mainColor} />
+        <Text
+          fontWeight={"semibold"}
+          fontSize={["12px", "14px", "16px", "18px"]}
+        >
+          {text}
+        </Text>
       </HStack>
     );
   };
+
   const benefits = [
     "Erschaffe eine Vision die dich ehrlich motiviert und inspiriert",
     "Finde deine Stärken, deine Werte und andere Ressourcen",
@@ -35,84 +27,53 @@ export function Header({ ...rest }) {
   ];
 
   return (
-    <>
-      <Box w={"100%"} zIndex={100} px={paddingX} {...rest}>
-        <Center pt={variant === "lg" && "150px"}>
-          <Box>
+    <Box
+      id={"header"}
+      width={"100%"}
+      height={"100vh"}
+      backgroundImage={headerBackground}
+      backgroundPosition={"center"}
+      backgroundSize={"auto 100%"}
+      position={"relative"}
+    >
+      <Center width={"100%"} position={"absolute"} bottom={"32px"}>
+        <Box px={"8px"}>
+          <Text
+            padding={"16px"}
+            fontWeight={"bold"}
+            width={"fit-content"}
+            backgroundColor={"white"}
+            borderTopRadius={["14px", "16px", "16px", "16px"]}
+          >
+            TESTKUNDEN GESUCHT
+          </Text>
+          <Stack
+            padding={["8px", "16px", "16px", "16px"]}
+            backgroundColor={"white"}
+            borderRadius={"16px"}
+            borderTopLeftRadius={"0px"}
+          >
             <Text
-              color={"black"}
-              fontSize={"16px"}
-              letterSpacing={2}
-              textTransform={"uppercase"}
-              fontWeight={"black"}
-              bgColor={"white"}
-              display={variant === "lg" && "inline-block"}
-              borderTopRadius={variant === "lg" && "25px"}
-              py={variant === "lg" && 5}
-              px={variant === "lg" && 10}
+              fontWeight={"extrabold"}
+              fontSize={["22px", "24px", "36px", "36px"]}
             >
-              Testkunden gesucht
+              Create your Path: <br />
+              Klarheit und Selbstentfaltung
             </Text>
-            <br />
-            <Stack
-              spacing={0}
-              fontSize={["20px", "36px", "48px", "48px", "56px"]}
+            <Text
+              fontSize={["16px", "16px", "18px", "18px"]}
               fontWeight={"bold"}
             >
-              <Text
-                display={variant === "lg" && "inline-block"}
-                bgColor={"white"}
-                borderTopRightRadius={variant === "lg" && "25px"}
-                pt={variant === "lg" && 5}
-                px={variant === "lg" && 10}
-              >
-                Create Your Path:
-              </Text>
-              <Text
-                display={variant === "lg" && "inline-block"}
-                bgColor={"white"}
-                borderBottomRightRadius={variant === "lg" && "25px"}
-                fontSize={["26px", "25px", "30px", "37px", "46px"]}
-                fontWeight={"black"}
-                pb={variant === "lg" && 5}
-                px={variant === "lg" && 10}
-              >
-                Klarheit und Selbstentfaltung
-              </Text>
-            </Stack>
-
-            <Text
-              bgColor={"white"}
-              borderBottomRadius={"25px"}
-              pb={variant === "lg" && 5}
-              px={variant === "lg" && 10}
-              pt={"10px"}
-              fontSize={["16px", "18px", "18px", "18px"]}
-              fontWeight={"extrabold"}
-              display={variant === "lg" && "inline-block"}
-            >
               in 12 Wochen durch wissenschaftlich valide Methoden:
-              <br />
-              <br />
-              {benefits.map((benefit, i) => {
-                return (
-                  <Box key={i}>
-                    <Benefit text={benefit} />
-                  </Box>
-                );
-              })}
             </Text>
-            <br />
-            {variant === "base" ? (
-              <Center>
-                <ActionButton />
-              </Center>
-            ) : (
-              <ActionButton />
-            )}
-          </Box>
-        </Center>
-      </Box>
-    </>
+            <Stack>
+              {benefits.map((benefit, index) => {
+                return <Benefit text={benefit} key={index} />;
+              })}
+            </Stack>
+          </Stack>
+        </Box>
+      </Center>
+    </Box>
   );
 }

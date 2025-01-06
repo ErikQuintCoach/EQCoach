@@ -26,7 +26,7 @@ export function Imprint() {
           IMPRESSUM
         </Heading>
         <Box h={1} w={120} bgColor={color.mainColor} />
-        <Text fontWeight={"extrabold"}>Aiforeveryone</Text>
+        <Text fontWeight={"extrabold"}>Create your Path</Text>
         <Text>
           Wiesekamp 2
           <br />
@@ -41,15 +41,15 @@ export function Imprint() {
           onClick={() => (window.location = "tel:017631009017")}
         >
           <ImMobile size={25} />
-          <Text fontSize={20}>+ 49 17631009017 </Text>
+          <Text fontSize={20}>+ 49 176 310 090 17 </Text>
         </HStack>
         <HStack
           _hover={{ color: color.mainColor }}
           cursor={"pointer"}
-          onClick={() => (window.location = "mailto:erik_quint@yahoo.de")}
+          onClick={() => (window.location = "mailto:moin@erikquint.de")}
         >
           <AiOutlineMail size={25} />
-          <Text>erik_quint@yahoo.de</Text>
+          <Text>moin@erikquint.de</Text>
         </HStack>
         <br />
         <Text>
