@@ -33,7 +33,8 @@ export function Fail() {
             textTransform="uppercase"
             color="#FFFFFF"
           >
-            Termin vereinbaren
+            kostenlose Kennlerngespräch
+
           </Text>
         </Stack>
         <Stack width="477.41px" height="30px" maxWidth="100%">
@@ -159,7 +160,7 @@ export function Fail() {
                   textTransform="uppercase"
                   color="#FFFFFF"
                 >
-                  Termin vereinbaren
+                 zum Kostenloses Kennlerngespräch
                 </Text>
               </Stack>
               <Stack
@@ -353,7 +354,7 @@ export function Fail() {
                   </Box>
                   <Box as="span"> ein. Klicke dafür auf den Button „</Box>
                   <Box as="span" fontWeight="bold" color="#D29F68">
-                    Termin vereinbaren
+                    kostenloses Kennlerngespräch
                   </Box>
                   <Box as="span">“.</Box>
                 </Text>
@@ -382,7 +383,7 @@ export function Fail() {
                 textTransform="uppercase"
                 color="#FFFFFF"
               >
-                Termin vereinbaren
+                Kostenloses Kennlerngespräch
               </Text>
             </Stack>
           </Stack>
@@ -923,7 +924,7 @@ export function Fail() {
                   color="#FFFFFF"
                   textAlign="center"
                 >
-                  Termin vereinbaren
+                  Kostenloses Kennlerngespräch
                 </Text>
               </Stack>
             </Stack>
@@ -1587,7 +1588,7 @@ export function Fail() {
                 color="#FFFFFF"
                 textAlign="center"
               >
-                Termin vereinbaren
+                Kostenloses Kennlerngespräch
               </Text>
             </Stack>
           </Stack>
@@ -2054,7 +2055,7 @@ export function Fail() {
                 color="#FFFFFF"
                 textAlign="center"
               >
-                Termin vereinbaren
+                Kostenloses Kennlerngespräch
               </Text>
             </Stack>
           </Stack>
@@ -2608,7 +2609,8 @@ export function Fail() {
                   color="#1D1D25"
                   textAlign="center"
                 >
-                  Termin vereinbaren
+                  Kostenloses Kennlerngespräch
+                  
                 </Text>
               </Stack>
             </Stack>

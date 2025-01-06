@@ -13,7 +13,7 @@ import { BurgerMenu } from "./BurgerMenu";
 import { services } from "./services";
 import { useContaxt } from "../../context/Context";
 import { useNavigate } from "react-router";
-import logo from '../../images/logo-cropped.png'
+//import logo from '../../images/logo-cropped.png'
 
 //Button ml maybe to big for screen
 
@@ -54,7 +54,7 @@ export function Navigation({ refs }) {
         borderBottomWidth={0.3}
         boxShadow={`0px -1px 10px 2px ${color.mainColor}`}
       >
-        <Image src={logo} h={"50px"} />
+ {/* <Image src={logo} h={"50px"} />*/}       
         <Spacer />
         {variant === "lg" ? (
           <>

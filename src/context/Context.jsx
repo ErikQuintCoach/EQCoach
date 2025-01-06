@@ -4,9 +4,13 @@ const Context = createContext({});
 
 export const ContextProvider = ({ children }) => {
   const [color, setColor] = useState({
-    /* mainColor: "#0077b6", */
-    mainColor: "#023e8a",
-    secondButton: "#9E9E9EBA",
+    /* Previous colors */
+    previousMainColor: "#00b4d8", // Hellerer Türkiston
+    previousSecondButton: "#9E9E9EBA",
+    
+    /* New colors */
+    mainColor: "#CF7F00", // New main color
+    secondButton: "#9E9E9EBA", // Keeping second button the same
   });
 
   const textCollection = {
@@ -19,19 +23,19 @@ export const ContextProvider = ({ children }) => {
     processes: [
       {
         name: "Kennlern- & Beratungstermin",
-        text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
+        text: "Sie fragen ein kostenloses Kennlerngespräch über unsere Webseite an und beantworten uns einige Fragen.",
       },
       {
         name: "Indentifikation der Lernschwächen",
-        text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
+        text: "Sie fragen ein kostenloses Kennlerngespräch über unsere Webseite an und beantworten uns einige Fragen.",
       },
       {
         name: "Regelmäßiger Unterricht",
-        text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
+        text: "Sie fragen ein kostenloses Kennlerngespräch über unsere Webseite an und beantworten uns einige Fragen.",
       },
       {
         name: "Lernmaterialien",
-        text: "Sie fragen ein kostenloses Erstgespräch über unsere Webseite an und beantworten uns einige Fragen.",
+        text: "Sie fragen ein kostenloses Kennlerngespräch über unsere Webseite an und beantworten uns einige Fragen.",
       },
     ],
     subjectHeadline: "In diesen Fächern können wir euch unterstützen",

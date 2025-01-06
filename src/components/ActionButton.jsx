@@ -11,8 +11,8 @@ export function ActionButton(props) {
 
   const {
     ml,
-    link = "https://calendly.com/jd-it-consulting/erstgespraech",
-    text = "Termin vereinbaren",
+    link = "https://calendly.com/erik-quint/30min",
+    text = "Kostenloses Kennlerngespräch",
     ...rest
   } = props;
 
@@ -27,16 +27,16 @@ export function ActionButton(props) {
       <a href={link} target="_blank">
         <Button
           ml={ml}
-          h={"70px"}
-          fontSize={"18px"}
-          w={"300px"}
+          h={"80px"}
+          fontSize={"16px"}
+          w={"350px"}
           textAlign={"center"}
           borderRadius={"50vh"}
           color={"white"}
           bg={color.mainColor}
           _hover={{ bgColor: color.mainColor }}
           textTransform={"uppercase"}
-          letterSpacing={2}
+          letterSpacing={2.5}
           className="parent"
           {...rest}
         >

@@ -27,7 +27,7 @@ import { services } from "./services";
 export function BurgerMenu({ refs, executeScroll }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { color } = useContaxt();
-  const size = useBreakpointValue({ base: 36, sm: 48, md: 48 });
+  const size = useBreakpointValue({ base: 36, sm: 48, md: 48});
   const navigate = useNavigate();
 
   return (

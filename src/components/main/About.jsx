@@ -29,7 +29,7 @@ export function About({ ...rest }) {
       <HeadLine
         text={
           <Text>
-            Meine <b>Mission</b> mit ai for everyone
+            Meine Mission mit <b>Create your Path</b>
           </Text>
         }
       />
@@ -47,18 +47,38 @@ export function About({ ...rest }) {
         }
         text={
           <Text /* maxW={"50vw"} */>
-            Als passionierter Schnelllerner und Wissensvermittler habe ich mein
-            Leben der Förderung des Lernens gewidmet. Mit einem fundierten
-            Hintergrund in Betriebswirtschaft, und meinem aktuellen Studium der
-            Psychologie mache ich IT-Themen für Nicht-ITler verständlich und
-            zugänglich. <br /> <br />
-            Mein Ziel ist es, Menschen und Unternehmen dabei zu helfen, in der
-            KI-Ära zu glänzen. <b>Niemand soll zurück bleiben.</b> <br /> <br />
-            Ein zentraler Bestandteil meiner Mission ist es, Bildung
-            zugänglicher zu machen.
-            <b>
-            Mit jeder Unternehmensbuchung unterstützen Sie maßgeblich die Schulung von Lehrkräften und tragen so dazu bei, diese Welt zu einem besseren Ort zu machen.
-            </b>
+           
+
+           Wir leben gesünder, wohlhabender und besser versorgt als je zuvor. Dennoch fällt es vielen schwer, ein 
+  erfülltes, selbstbestimmtes Leben zu führen. Kaum einer lebt noch seinen Traum. <br /> <br />
+  <Text as="i">
+    "Wer lebt schon seine Träume?" ... "Nur Träumer!" 
+  </Text>
+  <br />
+  <b>Oder?</b> <br /> <br />
+
+  Mich beflügelt der Gedanke, <strong>dir</strong> zu helfen, das zu tun. Auf der Basis 
+  fundamentaler Aspekte deiner Selbst kreiren wir <strong>deinen Traum</strong>. So klar, so attraktiv, dass er zur 
+  Vision wird. Eine Vision, die wir nun Realität werden lassen.
+  <br /> <br />
+            
+            <b>Wie schaffen wir das?</b> <br /> <br />
+            
+            <Text>
+  Mithilfe von <strong>wissenschaftlich</strong> fundierten Ansätzen,{" "}
+  <strong>psychologischer</strong> Expertise und{" "}
+  <strong>praxiserprobten</strong> Methoden entwickeln wir deine{" "}
+  <strong>Lebensvision</strong>, stärken deine <strong>Kompetenzen</strong>{" "}
+  und nutzen <strong>deine Ressourcen</strong> – also all jene inneren und
+  äußeren <strong>Stärken</strong>, die dir zur Verfügung stehen, wie{" "}
+  <strong>Fähigkeiten</strong>, <strong>Wissen</strong> oder{" "}
+  <strong>unterstützende Menschen</strong> – um{" "}
+  <strong>Klarheit</strong> zu gewinnen.
+</Text>
+      
+    
+            
+           
           </Text>
         }
       />

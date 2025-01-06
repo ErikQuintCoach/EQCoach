@@ -27,3 +27,23 @@
     transform: translate(-20px, 0);
     transition: opacity 0s, visibility 0s; /* Übergang auf 0 Sekunden setzen */
   }
+  /* Allgemeiner Stil für alle Info-Boxen */
+.info-box {
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.marcus-background {
+  background-image: url('/images/Marcus_42_image.jpg');
+}
+
+.elaine-background {
+  background-image: url('/images/Elaine_21_image.jpg');
+}

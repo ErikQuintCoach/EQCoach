@@ -9,10 +9,33 @@ export function HeaderImage() {
     md: "md",
     lg: "lg",
   });
+
   return (
-    <Box position={"absolute"} mt={"50px"}>
-      <Image src={headerBackground} w={"100vw"} />
-      <Image src={header} w={"100vw"} position={"absolute"} bottom={0} />
+    <Box 
+      position={"relative"} // Von "absolute" zu "relative" geändert
+      mt={"10px"}
+      overflow="hidden"
+      height={["50vh", "60vh", "70vh", "80vh"]} // Dynamische Höhe für verschiedene Breakpoints
+      w="100%"
+    >
+      {/* Hintergrundbild */}
+      <Image 
+        src={headerBackground} 
+        w="100%" 
+        objectFit="cover"
+        height="100%" // Passt sich an die Box-Höhe an
+      />
+
+      {/* Vordergrundbild */}
+      <Image 
+        src={header} 
+        w="100%" 
+        position={"absolute"} 
+        bottom={0}
+        objectFit="cover"
+        height={["30%", "40%", "50%", "60%"]} // Dynamische Höhe für verschiedene Breakpoints
+      />
     </Box>
   );
 }
+

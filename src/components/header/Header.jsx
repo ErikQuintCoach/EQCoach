@@ -24,14 +24,14 @@ export function Header({ ...rest }) {
     return (
       <HStack>
         <BsFillCheckSquareFill />
-        <Text fontSize={"22px"}>{text}</Text>
+        <Text fontSize={["14px", "22px", "22px", "22px"]}>{text}</Text>
       </HStack>
     );
   };
   const benefits = [
-    "automatisieren Sie einfache Arbeitsabläufe",
-    "Steigern Sie die Qualität ihres Outputs",
-    "Steigern Sie produktivität",
+    "Erschaffe eine Vision die dich ehrlich motiviert und inspiriert",
+    "Finde deine Stärken, deine Werte und andere Ressourcen",
+    "Erkenne und ersetzte hinderliche Denkmuster",
   ];
 
   return (
@@ -51,12 +51,12 @@ export function Header({ ...rest }) {
               py={variant === "lg" && 5}
               px={variant === "lg" && 10}
             >
-              ai for everyone
+              Testkunden gesucht
             </Text>
             <br />
             <Stack
               spacing={0}
-              fontSize={["25px", "36px", "48px", "48px", "56px"]}
+              fontSize={["20px", "36px", "48px", "48px", "56px"]}
               fontWeight={"bold"}
             >
               <Text
@@ -66,16 +66,18 @@ export function Header({ ...rest }) {
                 pt={variant === "lg" && 5}
                 px={variant === "lg" && 10}
               >
-                ChatGPT-Online Seminar:
+                Create Your Path:
               </Text>
               <Text
                 display={variant === "lg" && "inline-block"}
                 bgColor={"white"}
                 borderBottomRightRadius={variant === "lg" && "25px"}
+                fontSize={["26px", "25px", "30px", "37px", "46px"]}
+                fontWeight={"black"}
                 pb={variant === "lg" && 5}
                 px={variant === "lg" && 10}
               >
-                Nutzen Sie das mächtigste KI-Tool effektiv
+                Klarheit und Selbstentfaltung
               </Text>
             </Stack>
 
@@ -85,11 +87,11 @@ export function Header({ ...rest }) {
               pb={variant === "lg" && 5}
               px={variant === "lg" && 10}
               pt={"10px"}
-              fontSize={"18px"}
+              fontSize={["16px", "18px", "18px", "18px"]}
               fontWeight={"extrabold"}
               display={variant === "lg" && "inline-block"}
             >
-              für Führungskräfte und Unternehmer
+              in 12 Wochen durch wissenschaftlich valide Methoden:
               <br />
               <br />
               {benefits.map((benefit, i) => {
@@ -100,7 +102,7 @@ export function Header({ ...rest }) {
                 );
               })}
             </Text>
-            <br></br>
+            <br />
             {variant === "base" ? (
               <Center>
                 <ActionButton />

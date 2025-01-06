@@ -46,10 +46,10 @@ export function Imprint() {
         <HStack
           _hover={{ color: color.mainColor }}
           cursor={"pointer"}
-          onClick={() => (window.location = "mailto:kontakt@aiforeveryone.de")}
+          onClick={() => (window.location = "mailto:erik_quint@yahoo.de")}
         >
           <AiOutlineMail size={25} />
-          <Text>kontakt@aiforeveryone.de</Text>
+          <Text>erik_quint@yahoo.de</Text>
         </HStack>
         <br />
         <Text>

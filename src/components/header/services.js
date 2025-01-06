@@ -4,7 +4,7 @@ export const services = [
         ref: "header",
     },
     {
-        name: "Informationen",
+        name: "Bewertungen",
         ref: "info",
     },
     {
@@ -12,11 +12,15 @@ export const services = [
         ref: "mission",
     },
     {
-        name: "Angebote",
+        name: "Coaching",
         ref: "offers",
     },
     {
         name: "Kontakt",
         ref: "contact",
+    },
+    {
+        name: "Qualifikation",
+        ref: "qualification",
     },
 ];

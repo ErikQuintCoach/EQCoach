@@ -75,7 +75,7 @@ const ContactData = ({ height, width, call, setCall }) => {
           color="white"
           cursor={"pointer"}
           onClick={() => {
-            window.location = "mailto:kontakt@aiforeveryone.de";
+            window.location = "mailto:erik_quint@yahoo.de";
           }}
           borderRadius={5}
         >
@@ -85,15 +85,15 @@ const ContactData = ({ height, width, call, setCall }) => {
         </Box>
         <Text
           onClick={() => {
-            window.location = "mailto:kontakt@aiforeveryone.de";
+            window.location = "mailto:erik_quint@yahoo.de";
           }}
           fontSize={variant === "base" ? 18 : 26}
           fontWeight="bold"
         >
           {variant === "base" ? (
-            <>kontakt@aiforeveryone.de</>
+            <>erik_quint@yahoo.de</>
           ) : (
-            <>kontakt@aiforeveryone.de</>
+            <>erik_quint@yahoo.de</>
           )}
         </Text>
       </HStack>
@@ -164,7 +164,7 @@ export function ContactForm() {
         {window.location.pathname !== "/kontakt" && (
           <Text fontSize={25} color={"gray"} pt={2}>
             {" "}
-            KONTAKTIEREN SIE UNS{" "}
+            Fragen, Anliegen, Kooperationsideen?{" "}
           </Text>
         )}
         <Box
@@ -173,7 +173,7 @@ export function ContactForm() {
           letterSpacing={[-2, -2, -3, -3]}
         >
           {" "}
-          WIR FREUEN UNS AUF SIE
+          Meld dich bei mir
         </Box>
         {variant === "lg" && (
           <ContactData

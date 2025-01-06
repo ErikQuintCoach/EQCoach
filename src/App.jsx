@@ -20,6 +20,7 @@ import { useContaxt } from "./context/Context";
 import { Offers } from "./components/Offers";
 import { MainInfo } from "./components/main/MainInfo";
 import { InfoMaterial } from "./components/InfoMaterial";
+import { Qualification } from "./components/Qualification";
 
 export function App() {
   const variant = useBreakpointValue({
@@ -55,14 +56,14 @@ export function App() {
           </>
         )}
       </Box>
-      {variant !== "lg" && <Box h={variant === "base" ? "85vh" : "70vh"} />}
-      <Stack spacing={spacingTop} pt={["0px", "0px", "0px", "100px"]}>
+      {variant !== "lg" && <Box h={variant === "base" ? "70vh" : "70vh"} />}
+      <Stack spacing={spacingTop} pt={["0px", "0px", "0px", "0px"]}>
+        <About id={"mission"} />
         <MainInfo />
         <CallToAction />
         <InfoMaterial id={"info"} />
-        <About id={"mission"} />
         <Offers id={"offers"} />
-        <CallToAction />
+        <Qualification id={"qualification"} />
         <Box
           id={"contact"}
           backgroundImage={bottom}

@@ -12,74 +12,68 @@ import {
 import { useContaxt } from "../context/Context";
 import { ActionButton } from "./ActionButton";
 import { HeadLine } from "./HeadLine";
+import { TestimonialCarousel } from "./TestimonialCarousel";
+import React from 'react';
+import { Box, Image, Flex } from '@chakra-ui/react';
 
 export function InfoMaterial({ ...rest }) {
-  const infos = [
+  const testimonials = [
     {
-      title: "MIT: ChatGPT steigert Produktivität um 37% - gleiche Qualität",
-      description: `Dieser Effizienzgewinn wurde mit einem "Industriellen Revolution-Level" verglichen.`,
-      link: "https://www.aiforeveryone.de/studien/Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence.pdf",
+      title: "Marcus, 42",
+      description: `.... durch Erik konnte ich die Ursache meiner mentalen Blockaden verstehen und sie über den Coaching Prozess hinweg lösen. Dafür bin ich unendlich dankbar!`,
+      link: null, // No link for Marcus
+      className: "marcus-background",
+      image: "Marcus_42 image.jpg", // Use the exact filename from the images folder
+      type: "testimonial"
     },
     {
-      title: "Italien: 50% weniger Output durch Verbot von ChatGPT",
-      description: `Die unbeabsichtigten Folgen der Zensur digitaler Technologie - 
-        Untersucht wurde der Output von 8000 Programmierern.`,
-      link: "https://www.aiforeveryone.de/studien/Die unbeabsichtigten Folgen der Zensur digitaler Technologie.pdf",
+      title: "Elaine, 21",
+      description: `... so unterstützend und wertvoll. Ich habe mich wohl und sicher gefühlt,.., wertvolle Erkenntnisse gewonnen. Insgesamt hat es mich gestärkt und motiviert.`,
+      link: null, // No link for Elaine
+      className: "elaine-background",
+      image: "Elaine Foto.jpg", // Use the exact filename from the images folder
+      type: "testimonial"
     },
     {
-      title: "ChatGPT Schulung verringert Ängste",
-      description: `GPT-Schulungen reduzieren Ängste der Mitarbeiter und steigern gleichzeitig ihre Bereitschaft, dieses Tool effektiv zu nutzen.`,
-      link: "https://www.aiforeveryone.de/studien/Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence.pdf",
+      title: "Veronika, 29",
+      description: `.... Durch seine klaren, gezielten Fragen und empathische Art sind wir in eine Tiefe vorgedrungen, die nachhaltige Veränderungen ermöglicht hat. Absolut empfehlenswert!`,
+      link: null,
+      className: "veronika-background",
+      image: "Veronika_Bild.jpg",
+      type: "testimonial"
     },
+    {
+      title: "Coaching ist nachweislich effektiv!",
+      description: `Wissenschaftliche Studien zeigen konsequent, dass Coaching Menschen dabei hilft, ihre persönlichen und beruflichen Ziele zu erreichen.`,
+      link: "https://www.rauen.de/coaching-report/definition-coaching/wirksamkeit.html",
+      className: "coaching-effective-background",
+      image: null, // No image for the study tile
+      type: "study"
+    },
+    {
+      title: "Lisa, 28",
+      description: `...Erik weiß, wovon er spricht. Er hat mit mir meine tiefliegenden Glaubenssätze beleuchtet mich dazu gebracht, aus meiner Komfortzone auszutreten.Ich habe mich sehr wohl gefühlt und würde es immer wieder tun. `,
+      link: null, // No link for Lisa
+      className: "veronika-background",
+      image: "Lisa_Foto.jpg",
+      type: "testimonial"
+    }
+    
+
   ];
 
   const { spacingTop } = useContaxt();
 
-  const InfoCard = ({ info,link, title, description }) => {
-    return (
-      <Card h={400} maxW={400}>
-        <CardHeader textAlign={"center"} h={130}>
-          <Heading size={"lg"}>{title}</Heading>
-        </CardHeader>
-        <CardBody fontSize={22} textAlign={"center"}>
-          <Stack h={"100%"}>
-            <Text>{description}</Text>
-            <Spacer />
-            <ActionButton
-            link={link}
-              text={"Zur Studie"}
-              h={"50px"}
-              fontSize={"15px"}
-              w={"250px"}
-            />
-          </Stack>
-        </CardBody>
-      </Card>
-    );
-  };
-
   return (
-    <Stack spacing={"60px"} {...rest}>
+    <Stack spacing={"50px"} {...rest}>
       <HeadLine
         text={
           <Text>
-            Einige <b>Informationen</b> über <b>Künstliche Intelligenz</b>
+            Was <b>Klienten</b> vor dir über mich <b>sagen</b>
           </Text>
         }
       />
-      <Wrap justify={"center"} spacing={"50px"}>
-        {infos.map((info, i) => {
-          return (
-            <WrapItem>
-              <InfoCard
-                title={info.title}
-                description={info.description}
-                link={info.link}
-              />
-            </WrapItem>
-          );
-        })}
-      </Wrap>
+      <TestimonialCarousel testimonials={testimonials} />
     </Stack>
   );
 }

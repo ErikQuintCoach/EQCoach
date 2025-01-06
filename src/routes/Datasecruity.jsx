@@ -53,7 +53,7 @@ export function Datasecruity() {
         <Text textAlign={"left"}>
           Erik Quint
           <br />
-          kontakt@aiforeveryone.de
+          erik_quint@yahoo.de
           <br />+ 49 17631009017
         </Text>
 
@@ -596,10 +596,10 @@ export function Datasecruity() {
           E-Mail{" "}
           <span>
             <a
-              aria-label={`Nehme Kontakt zu AI for Everyone per Email auf`}
-              href="mailto: widerspruch@aiforeveryone.de"
+              aria-label={`Schreib mir eine E-Mail`}
+              href="mailto: erik_quint@yahoo.de"
             >
-              widerspruch@aiforeveryone.de
+              erik_quint@yahoo.de
             </a>
           </span>
           .

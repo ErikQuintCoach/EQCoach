@@ -5,7 +5,7 @@ import { ActionButton } from "./ActionButton";
 export function CallToAction() {
   const { spacingTop } = useContaxt();
   const text = useBreakpointValue({
-    base: "Jetzt Termin vereinbaren",
+    base: "Termin vereinbaren",
     sm: "Jetzt Termin vereinbaren",
     md: "Termin vereinbaren",
   });
