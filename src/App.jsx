@@ -58,11 +58,11 @@ export function App() {
       </Box>
       {variant !== "lg" && <Box h={variant === "base" ? "70vh" : "70vh"} />}
       <Stack spacing={spacingTop} pt={["0px", "0px", "0px", "0px"]}>
-        <About id={"mission"} />
         <MainInfo />
         <CallToAction />
         <InfoMaterial id={"info"} />
         <Offers id={"offers"} />
+        <About id={"mission"} />
         <Qualification id={"qualification"} />
         <Box
           id={"contact"}
