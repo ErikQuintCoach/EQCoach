@@ -1,28 +1,27 @@
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
+  Box,
   Button,
-  Spacer,
-  Text,
-  Input,
-  Textarea,
   Center,
   HStack,
-  Stack,
-  Box,
-  useBreakpointValue,
+  Input,
   NumberInput,
-  Heading,
+  Spacer,
+  Stack,
+  Text,
+  Textarea,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import { ImMobile } from "react-icons/im";
 import { AiOutlineMail } from "react-icons/ai";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { ImMobile } from "react-icons/im";
 import { useToastHook } from "./useToastHook";
 
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useContaxt } from "../context/Context";
 
-const ContactData = ({ height, width, call, setCall }) => {
+const ContactData = ({ height, width }) => {
   const variant = useBreakpointValue({ base: "base", sm: "sm" });
 
   const { color } = useContaxt();
@@ -56,10 +55,6 @@ const ContactData = ({ height, width, call, setCall }) => {
             {" "}
             +49 176 31009017
           </Text>
-          {/*           <Text fontSize={variant === "base" ? 18 : 22} color="gray" w={230}>
-            {" "}
-            Mo. - So. 10:00 - 22:00
-          </Text> */}
         </Stack>
       </HStack>
     );
@@ -118,12 +113,11 @@ const ContactData = ({ height, width, call, setCall }) => {
 };
 
 export function ContactForm() {
-  const [state, newToast] = useToastHook();
+  const [, newToast] = useToastHook();
   const [call, setCall] = useState(false);
   const {
     register,
     handleSubmit,
-    getValues,
     reset,
     formState: { errors },
   } = useForm();
@@ -138,16 +132,25 @@ export function ContactForm() {
   const onSubmit = async (data) => {
     const { name, email, message, phone } = data;
     try {
-      axios.post(
-        `https://webwerk-am-meer.de/php/contactFormular.php?name=${name}&tel=${phone}&email=${email}&message=${message}`
+      const response = axios.post(
+        `https://erikquint.de/php/contactFormular.php?name=${name}&tel=${phone}&email=${email}&message=${message}`
       );
-      reset();
-      newToast({
-        title: "Danke für ihre Anfrage",
-        message:
-          "Ihre Anfrage wurde versendet, wir melden uns so schnell wie möglich bei Ihnen",
-        status: "success",
-      });
+      if (response.data === "Message sent successfully...") {
+        reset();
+        newToast({
+          title: "Danke für ihre Anfrage",
+          message:
+            "Ihre Anfrage wurde versendet, wir melden uns so schnell wie möglich bei Ihnen",
+          status: "success",
+        });
+      } else {
+        newToast({
+          title: "Ein Fehler ist aufgetreten",
+          message:
+            "Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch oder per Email.",
+          status: "error",
+        });
+      }
     } catch (e) {
       console.log(e);
     }
