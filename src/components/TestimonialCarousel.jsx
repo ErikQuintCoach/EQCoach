@@ -232,7 +232,7 @@ export function TestimonialCarousel({ testimonials }) {
         transition="transform 0.5s ease-in-out"
         mx="auto"
         maxW="1200px"
-        px={4}
+        px={0}
         gap={4}
       >
         {getVisibleIndices().map((index) =>

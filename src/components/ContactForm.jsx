@@ -169,7 +169,7 @@ export function ContactForm() {
         <Box
           fontSize={[23, 27, 40, 40, 42]}
           width={variant === "lg" && "16ch"}
-          letterSpacing={[-2, -2, -3, -3]}
+          letterSpacing={[0, -2, -3, -3]}
         >
           {" "}
           Meld dich bei mir
@@ -188,7 +188,7 @@ export function ContactForm() {
   return (
     <Center pt={0}>
       <form id="contact-form" onSubmit={handleSubmit(onSubmit)} noValidate>
-        <HStack w={["90vw", "90vw", "90vw", "95vw", "90vw"]}>
+        <HStack w={["95vw", "90vw", "90vw", "95vw", "90vw"]}>
           {variant === "lg" && <Header />}
           {variant === "lg" ? (
             <>
@@ -280,10 +280,10 @@ export function ContactForm() {
                 <ContactData
                   call={call}
                   setCall={(val) => setCall(val)}
-                  width={"90vw"}
+                  width={"95vw"}
                 />
                 <Spacer />
-                <Stack w={"90vw"}>
+                <Stack w={"95vw"}>
                   <Textarea
                     borderWidth={1}
                     borderColor={"black"}
@@ -303,7 +303,7 @@ export function ContactForm() {
                       borderColor={"black"}
                       bgColor={"white"}
                       aria-label="Wie heißen Sie?"
-                      w={"90vw"}
+                      w={"95vw"}
                       placeholder={"Ihr Name *"}
                       {...register("name", {
                         required: {

@@ -31,17 +31,24 @@ export function Offers({ ...rest }) {
 
   return (
     <Box {...rest}>
-      <HeadLine text={<Text>Deine Coaching Optionen</Text>} />
+      <HeadLine
+        text={
+          <Text fontSize={["32px", "38px", "50px", "50px"]} fontWeight={"bold"}>
+            Deine Coaching Optionen
+          </Text>
+        }
+      />
+
       <AboutText
         w={1100}
-        textWidth={["90vw", "90vw", "90vw", "500px"]}
+        textWidth={["95vw", "90vw", "90vw", "500px"]}
         side={"left"}
         name={"Create Your Path"}
         image={
           <Image
             boxShadow={variant !== "base" && "17px 17px 0px 5px #000000"}
             src={bild_eins}
-            w={variant !== "base" ? "350px" : "90vw"}
+            w={variant !== "base" ? "350px" : "95vw"}
             borderRadius={10}
           />
         }

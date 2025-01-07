@@ -17,7 +17,7 @@ export function Qualification() {
   return (
     <Box id="qualification" w="100%">
       <Center>
-        <Stack spacing={6} maxW={1000} px={[5, 7, "100px", "100px"]}>
+        <Stack spacing={6} maxW={1000} px={["2.5vw", 7, "100px", "100px"]}>
           {/* Überschrift */}
           <HeadLine
             text={
