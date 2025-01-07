@@ -28,9 +28,11 @@ export function Imprint() {
         <Box h={1} w={120} bgColor={color.mainColor} />
         <Text fontWeight={"extrabold"}>Create your Path</Text>
         <Text>
-          Wiesekamp 2
+          Fleet 7
           <br />
-          24226 Heikendorf
+          Fleethörn 7
+          <br />
+          24103 Kiel
           <br />
           Deutschland
         </Text>
