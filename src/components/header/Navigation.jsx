@@ -1,21 +1,11 @@
-import {
-  Button,
-  Center,
-  HStack,
-  Image,
-  Spacer,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import { HeaderLink } from "./HeaderLink";
+import { HStack, Image, Spacer, useBreakpointValue } from "@chakra-ui/react";
+import { useNavigate } from "react-router";
+import { useContaxt } from "../../context/Context";
+import logo from "../../images/logo/logo_big.png";
 import { ActionButton } from "../ActionButton";
 import { BurgerMenu } from "./BurgerMenu";
+import { HeaderLink } from "./HeaderLink";
 import { services } from "./services";
-import { useContaxt } from "../../context/Context";
-import { useNavigate } from "react-router";
-//import logo from '../../images/logo-cropped.png'
-
-//Button ml maybe to big for screen
 
 export function Navigation({ refs }) {
   const { color } = useContaxt();
@@ -44,7 +34,7 @@ export function Navigation({ refs }) {
         w={"100%"}
         bg={"white"}
         h={["70px", "90px", "90px", "90px"]}
-        px={[5, 7, "60px", "60px"]}
+        px={[5, 7, "40px", "20px"]}
         zIndex={5}
         position={"fixed"}
         top={0}
@@ -52,6 +42,7 @@ export function Navigation({ refs }) {
         borderBottomWidth={0.3}
         boxShadow={`0px -1px 10px 2px ${color.mainColor}`}
       >
+        <Image maxHeight={"60px"} src={logo} />
         <Spacer />
         {variant === "lg" ? (
           <>

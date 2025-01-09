@@ -4,7 +4,7 @@ export const services = [
     ref: "header",
   },
   {
-    name: "Teilnehmer Stimmen",
+    name: "Teilnehmer",
     ref: "info",
   },
   {
