@@ -1,5 +1,4 @@
 .parent {
-
 }
 .child {
   visibility: hidden;
@@ -22,12 +21,11 @@
 }
 
 .parent:not(:hover) > .child {
-
-    opacity: 0; /* Element unsichtbar machen, wenn nicht gehovert wird */
-    transform: translate(-20px, 0);
-    transition: opacity 0s, visibility 0s; /* Übergang auf 0 Sekunden setzen */
-  }
-  /* Allgemeiner Stil für alle Info-Boxen */
+  opacity: 0; /* Element unsichtbar machen, wenn nicht gehovert wird */
+  transform: translate(-20px, 0);
+  transition: opacity 0s, visibility 0s; /* Übergang auf 0 Sekunden setzen */
+}
+/* Allgemeiner Stil für alle Info-Boxen */
 .info-box {
   padding: 20px;
   margin: 15px;
@@ -41,9 +39,9 @@
 }
 
 .marcus-background {
-  background-image: url('/images/Marcus_42_image.jpg');
+  background-image: url("/images/Marcus_42_image.webp");
 }
 
 .elaine-background {
-  background-image: url('/images/Elaine_21_image.jpg');
+  background-image: url("/images/Elaine_21_image.webp");
 }

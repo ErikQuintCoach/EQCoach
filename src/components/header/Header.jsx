@@ -1,5 +1,5 @@
 import { Box, Center, HStack, Stack, Text } from "@chakra-ui/react";
-import headerBackground from "../../images/header.jpg";
+import headerBackground from "../../images/header.webp";
 import { BsFillCheckSquareFill } from "react-icons/bs";
 import { useContaxt } from "../../context/Context";
 

@@ -1,17 +1,7 @@
-import {
-  Box,
-  Center,
-  HStack,
-  Image,
-  Spacer,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import { AboutText } from "./AboutText";
+import { Box, Image, Text, useBreakpointValue } from "@chakra-ui/react";
+import erik_quint from "../../images/erik_quint.webp";
 import "../css/About.css";
-import erik_quint from "../../images/erik_quint.jpg";
-
+import { AboutText } from "./AboutText";
 import { useContaxt } from "../../context/Context";
 import { HeadLine } from "../HeadLine";
 

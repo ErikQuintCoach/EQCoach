@@ -1,25 +1,19 @@
 import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Box,
-  Center,
-  HStack,
+  Heading,
   Image,
-  Spacer,
-  Stack,
   Text,
   useBreakpointValue,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Heading,
 } from "@chakra-ui/react";
-import { AboutText } from "./main/AboutText";
-import { HeadLine } from "./HeadLine";
 import { ActionButton } from "./ActionButton";
-
-import bild_eins from "../images/angebote-bild_eins.jpg";
-import nachhilfe_schülerin_tafel from "../images/nachhilfe_schülerin_an_tafel.jpg";
+import { HeadLine } from "./HeadLine";
+import { AboutText } from "./main/AboutText";
+import bild_eins from "../images/angebote-bild_eins.webp";
 
 export function Offers({ ...rest }) {
   const variant = useBreakpointValue({

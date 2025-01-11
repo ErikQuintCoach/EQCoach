@@ -17,10 +17,10 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 
-import ElaineImage from "../images/Elaine_Foto.jpg";
-import LisaImage from "../images/Lisa_Foto.jpg";
-import MarcusImage from "../images/Marcus_42_image.jpg";
-import VeronikaImage from "../images/Veronika_Bild.jpg";
+import ElaineImage from "../images/Elaine_Foto.webp";
+import LisaImage from "../images/Lisa_Foto.webp";
+import MarcusImage from "../images/Marcus_42_image.webp";
+import VeronikaImage from "../images/Veronika_Bild.webp";
 
 export function TestimonialCarousel({ testimonials }) {
   const [currentIndex, setCurrentIndex] = useState(0);
