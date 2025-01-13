@@ -134,6 +134,7 @@ export const ContextProvider = ({ children }) => {
         color,
         setColor,
         isSmartphone: variant === "base",
+        isTablet: variant === "base" || variant === "sm",
       }}
     >
       {children}

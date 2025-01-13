@@ -1,18 +1,13 @@
-import { Box, Image, Text, useBreakpointValue } from "@chakra-ui/react";
-import erik_quint from "../../images/erik_quint.webp";
-import "../css/About.css";
-import { AboutText } from "./AboutText";
+import { Box, Image, Text } from "@chakra-ui/react";
 import { useContaxt } from "../../context/Context";
+import imageDesktop from "../../images/erik_quint.webp";
+import imageMobile from "../../images/erik_quint_2.webp";
+import "../css/About.css";
 import { HeadLine } from "../HeadLine";
+import { AboutText } from "./AboutText";
 
 export function About({ ...rest }) {
-  const variant = useBreakpointValue({
-    base: "base",
-    sm: "sm",
-    md: "md",
-    lg: "lg",
-  });
-  const { textCollection } = useContaxt();
+  const { variant, isTablet } = useContaxt();
 
   return (
     <Box {...rest}>
@@ -30,7 +25,7 @@ export function About({ ...rest }) {
         image={
           <Image
             boxShadow={variant !== "base" && "17px 17px 0px 5px #000000"}
-            src={erik_quint}
+            src={isTablet ? imageMobile : imageDesktop}
             w={variant !== "base" ? "350px" : "95vw"}
             borderRadius={10}
           />

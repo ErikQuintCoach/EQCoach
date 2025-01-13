@@ -1,10 +1,12 @@
 import { Box, Center, HStack, Stack, Text } from "@chakra-ui/react";
-import headerBackground from "../../images/header.webp";
+import headerBackgroundDesktop from "../../images/erik_quint_2.webp";
+import headerBackgroundMobile from "../../images/erik_quint.webp";
+
 import { BsFillCheckSquareFill } from "react-icons/bs";
 import { useContaxt } from "../../context/Context";
 
 export function Header() {
-  const { color } = useContaxt();
+  const { color, isTablet } = useContaxt();
 
   const Benefit = ({ text }) => {
     return (
@@ -31,7 +33,9 @@ export function Header() {
       id={"header"}
       width={"100%"}
       height={"100vh"}
-      backgroundImage={headerBackground}
+      backgroundImage={
+        isTablet ? headerBackgroundMobile : headerBackgroundDesktop
+      }
       backgroundPosition={"center"}
       backgroundSize={"auto 100%"}
       position={"relative"}
