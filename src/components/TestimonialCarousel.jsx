@@ -21,9 +21,11 @@ import ElaineImage from "../images/Elaine_Foto.webp";
 import LisaImage from "../images/Lisa_Foto.webp";
 import MarcusImage from "../images/Marcus_42_image.webp";
 import VeronikaImage from "../images/Veronika_Bild.webp";
+import { useContaxt } from "../context/Context";
 
 export function TestimonialCarousel({ testimonials }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { color } = useContaxt();
   const [hiddenTextIndices, setHiddenTextIndices] = useState({}); // Changed to track hidden state
   const carouselRef = useRef(null);
   const variant = useBreakpointValue({ base: 1, md: 2, lg: 3 });
@@ -183,7 +185,9 @@ export function TestimonialCarousel({ testimonials }) {
               >
                 <Button
                   rightIcon={<ExternalLinkIcon />}
-                  colorScheme="blue"
+                  backgroundColor={color.mainColor}
+                  _hover={{ backgroundColor: color.mainColor }}
+                  color={"white"}
                   size="lg"
                 >
                   Zur Studie
@@ -243,11 +247,11 @@ export function TestimonialCarousel({ testimonials }) {
       <Center mt={6} pb={3}>
         <IconButton
           aria-label="Previous slide"
-          icon={<ChevronLeftIcon boxSize={6} />}
+          icon={<ChevronLeftIcon boxSize={6} color={"white"} />}
           onClick={prevSlide}
           mr={4}
           isRound
-          colorScheme="blue"
+          backgroundColor={color.mainColor}
           size="lg"
           _hover={{
             transform: "scale(1.1)",
@@ -258,6 +262,7 @@ export function TestimonialCarousel({ testimonials }) {
         <IconButton
           aria-label="Next slide"
           icon={<ChevronRightIcon boxSize={6} />}
+          backgroundColor={color.mainColor}
           onClick={nextSlide}
           isRound
           colorScheme="blue"

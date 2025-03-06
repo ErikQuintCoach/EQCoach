@@ -12,6 +12,7 @@ import {
   surveyContent,
   surveyThankYouContent,
 } from "./components/landing-pages/page-definitions/refferal/surveyContent.jsx";
+import { CookieProvider } from "./components/cookies/CookieProvider.jsx";
 // Hier den Inhalt für die neue Landing Page reinladen (siehe Beispielhaft "surveyContent")
 
 const router = createBrowserRouter([
@@ -31,14 +32,14 @@ const router = createBrowserRouter([
   },
 
   */
-  {
+  /*   {
     path: "/umfrage",
     element: <LandingPage content={surveyContent} />,
   },
   {
     path: "/umfrage/danke",
     element: <LandingPage content={surveyThankYouContent} />,
-  },
+  }, */
   {
     path: "/impressum",
     element: (
@@ -63,7 +64,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider>
       <ContextProvider>
-        <RouterProvider router={router} />
+        <CookieProvider>
+          <RouterProvider router={router} />
+        </CookieProvider>
       </ContextProvider>
     </ChakraProvider>
   </React.StrictMode>

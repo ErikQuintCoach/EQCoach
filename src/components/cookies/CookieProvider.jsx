@@ -5,7 +5,8 @@ import { CookieOptIn } from "./CookieOptIn";
 
 export function CookieProvider({ children }) {
   const { cookies } = useContaxt();
-  useEffect(() => {
+  console.warn("Cookies :", cookies);
+  /*   useEffect(() => {
     if (cookies) {
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
@@ -33,7 +34,7 @@ export function CookieProvider({ children }) {
       fbq("init", "817935276436483");
       fbq("track", "PageView");
     }
-  }, [cookies]);
+  }, [cookies]); */
 
   return (
     <>

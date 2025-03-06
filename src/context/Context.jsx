@@ -1,5 +1,5 @@
 import { useBreakpointValue } from "@chakra-ui/react";
-import { useState, useContext, useEffect, useRef, createContext } from "react";
+import { useState, useContext, createContext } from "react";
 import Cookies from "universal-cookie";
 import ReactGA from "react-ga4";
 
@@ -7,8 +7,8 @@ const Context = createContext({});
 
 export const ContextProvider = ({ children }) => {
   const [color, setColor] = useState({
-    mainColor: "#CF7F00", // New main color
-    secondButton: "#9E9E9EBA", // Keeping second button the same
+    //mainColor: "#1A064B", // Das hier verändert die Farbe für die gesamte Webseite
+    mainColor: "#f8961e",
   });
 
   const paddingX = [3, 3, 3, 3];
@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
     lg: "lg",
   });
 
-  const googleAnalyticsTag = "G-NLRVBQ52C2";
+  const googleAnalyticsTag = "G-DV9ZP2JF9S";
 
   const cookiesList = new Cookies();
   let cookieState;

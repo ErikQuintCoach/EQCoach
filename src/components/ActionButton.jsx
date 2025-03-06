@@ -1,10 +1,11 @@
-import { Button, Center } from "@chakra-ui/react";
+import { Center } from "@chakra-ui/react";
+import { AutoTextSize } from "auto-text-size";
+import ReactGA from "react-ga4";
 import { useContaxt } from "../context/Context";
 import "./css/buttonHover.css";
-import { AutoTextSize } from "auto-text-size";
 
 export function ActionButton(props) {
-  const { color } = useContaxt();
+  const { color, cookies } = useContaxt();
 
   const {
     link = "https://calendly.com/erik-quint/30min",
@@ -22,6 +23,15 @@ export function ActionButton(props) {
         color={"white"}
         textTransform={"uppercase"}
         bg={color.mainColor}
+        onClick={() => {
+          if (cookies) {
+            ReactGA.event({
+              category: "Call to Action Klick in ActionButton",
+              action: "Action Button Click",
+              label: `Call to Action Klick in ActionButton`,
+            });
+          }
+        }}
         {...rest}
       >
         <AutoTextSize maxFontSizePx={16}>{text}</AutoTextSize>

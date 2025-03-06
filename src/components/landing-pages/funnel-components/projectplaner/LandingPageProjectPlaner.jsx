@@ -15,7 +15,6 @@ export function LandingPageProjectPlaner({ planerQuestions, footer, ...rest }) {
 
   const nextQuestion = (answer) => {
     if (cookies) {
-      console.log("React GA Event geworfen");
       ReactGA.event({
         category: "Landing Page",
         action: "Anwsered Project Planer Question",

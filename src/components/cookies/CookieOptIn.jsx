@@ -47,7 +47,7 @@ export function CookieOptIn() {
     }
   }, [cookies]);
 
-  if (!cookies) return null;
+  if (cookies) return null;
 
   return (
     <>

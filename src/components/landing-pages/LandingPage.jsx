@@ -13,6 +13,7 @@ import { LandingPageWhatsAppAudio } from "./funnel-components/LandingPageWhatsAp
 import { ProjectPlanerContactPerson } from "./funnel-components/projectplaner/contact-form/ProjectPlanerContactPerson";
 import { LandingPageProjectPlaner } from "./funnel-components/projectplaner/LandingPageProjectPlaner";
 import { LandingPageWrapper } from "./LandingPageWrapper";
+import { LandingPageVideo } from "./funnel-components/LandingPageVideo";
 
 export function LandingPage({ content }) {
   const { cookies } = useContaxt();
@@ -34,6 +35,8 @@ export function LandingPage({ content }) {
         switch (contentBlock.type) {
           case "image":
             return <LandingPageImage key={i} {...contentBlock} />;
+          case "video":
+            return <LandingPageVideo key={i} {...contentBlock} />;
           case "header":
             return (
               <LandingPageHeading
