@@ -1,0 +1,14 @@
+.stickyBottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .half-circle {
+    width: 120px;
+    height: 60px;
+    border-top-left-radius: 102px;
+    border-top-right-radius: 102px;
+    border: 2px solid rgb(0, 0, 0);
+    border-bottom: 0;
+  }

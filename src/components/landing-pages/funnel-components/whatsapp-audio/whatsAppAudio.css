@@ -1,0 +1,25 @@
+.audio.green-audio-player {
+  width: 100%;
+  max-width: 500px;
+  height: 56px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #fff;
+}
+
+.audio.green-audio-player .controls {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #55606e;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 18px;
+  margin-right: 18px;
+}

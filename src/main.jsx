@@ -4,13 +4,19 @@ import App from "./App.jsx";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { ContextProvider } from "./context/Context";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { TestRoute } from "./routes/TestRoute.jsx";
 import { Imprint } from "./routes/Imprint copy.jsx";
 import { Datasecruity } from "./routes/Datasecruity.jsx";
 import { Navigation } from "./components/header/Navigation.jsx";
+import { LandingPage } from "./components/landing-pages/LandingPage.jsx";
+import { surveyContent } from "./components/landing-pages/page-definitions/refferal/surveyContent.jsx";
 
 const router = createBrowserRouter([
+  { path: "*", element: <App /> },
   { path: "/", element: <App /> },
+  {
+    path: "/umfrage",
+    element: <LandingPage content={surveyContent} />,
+  },
   {
     path: "/impressum",
     element: (
