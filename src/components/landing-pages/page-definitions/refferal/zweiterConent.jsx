@@ -81,7 +81,6 @@ const mentalBenefits = [
 // Umfrage-Komponente
 const mentalSurvey = {
   type: "projectplaner",
-  pt: "32px",
   planerQuestions: mentalSurveyQuestions,
   footer: (
     <p>
@@ -101,8 +100,7 @@ const callToAction = {
 };
 
 // Landing Page Inhalt
-// export const --> Exportiert die Constante nach außen hin, damit man in anderen Dateien darauf zugreifen kann
-export const surveyContent = [
+export const zweiterContent = [
   {
     type: "image",
     src: landingpage_header,
@@ -121,6 +119,7 @@ export const surveyContent = [
     benefits: mentalBenefits,
     spacing: 5,
   },
+  callToAction,
   mentalSurvey,
   callToAction,
   {

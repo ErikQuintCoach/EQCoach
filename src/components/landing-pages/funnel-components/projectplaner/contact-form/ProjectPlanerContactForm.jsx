@@ -79,12 +79,6 @@ export function ProjectPlanerContactForm({ answers }) {
       icon: "📞",
       placeholder: "Deine Telefonnummer",
       name: "tel",
-      required: "Bitte gib deine Telefonnummer ein",
-      pattern: {
-        //value: /^\+?\d{10,20}$/i,
-        value: /^\+?\d{1,20}(?:\s\d{1,20})*$/i,
-        message: "Ungültige Telefonnummer",
-      },
     },
   ];
 

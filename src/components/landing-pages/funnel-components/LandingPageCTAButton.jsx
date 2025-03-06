@@ -17,12 +17,11 @@ export function LandingPageCTAButton({
         animate
           ? {
               scale: [1, 1.2, 1],
-              rotate: [0, -5, 0],
             }
           : false
       }
       transition={{
-        duration: 1,
+        duration: 0.8,
         repeat: Infinity,
         repeatDelay: 2,
       }}
