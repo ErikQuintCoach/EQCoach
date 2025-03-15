@@ -70,8 +70,7 @@ export function Offers({ ...rest }) {
                       verändert.
                     </li>
                     <li>
-                      Ich sehe, wie andere ihren Weg gehen, und frage mich:
-                      Warum fühlt sich meiner so falsch an?
+                      Ich sehe wie andere Ihren weg gehen und ich will etwas anderes. Ich will mehr als das hier.
                     </li>
                     <li>
                       Ich habe keine ehrliche Antwort auf die Frage: Was ist
@@ -80,11 +79,10 @@ export function Offers({ ...rest }) {
                     <li>Ich nutze meine Stärken nicht voll aus.</li>
                     <li>Unsicherheiten und Selbstzweifel stehen mir im Weg.</li>
                     <li>
-                      Ich frage mich: Was kann ich eigentlich wirklich? Was will
-                      ich eigentlich wirklich?
+                      Was will ich eigentlich wirklich?
                     </li>
                     <li>
-                      Alle scheinen halbwegs zufrieden zu sein, aber ich spüre,
+                      Alle scheinen zufrieden zu sein, aber ich spüre,
                       dass da mehr sein muss. Nur weiß ich nicht, wie ich es
                       finde.
                     </li>
@@ -96,7 +94,7 @@ export function Offers({ ...rest }) {
                 <h2>
                   <AccordionButton>
                     <Box flex="1" textAlign="left" fontWeight="bold">
-                      Die Lösung - Wie Create Your Path dir hilft:
+                      Deine Lösung - Free and Energy:
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
