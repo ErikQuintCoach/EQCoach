@@ -5,6 +5,23 @@ import { HeadLine } from "../HeadLine";
 import { BsX } from "react-icons/bs";
 
 export function MainInfo() {
+  const BulletPoint = ({ text }) => {
+    return (
+      <HStack>
+        <BsX color="red" size="20px" />
+        <Text>{`"${text}"`}</Text>
+      </HStack>
+    );
+  };
+
+  const bulletPoints = [
+    "Ich weiß, dass da mehr ist, aber wie finde ich es?",
+    "Ich habe Angst, in 32 Jahren aufzuwachen und festzustellen, dass alles gleichgeblieben ist – ich habe nichts verändert.",
+    "Ich wäre gerne selbstbewusster und zufriedener.",
+    "Werde ich irgendwann den Mut finden, endlich etwas zu ändern?",
+    "Ich will endlich durchstarten – aber wie?",
+  ];
+
   return (
     <>
       <Box w={"100%"}>
@@ -23,41 +40,9 @@ export function MainInfo() {
                 }
               />
               <Stack spacing={4} fontSize={"18px"}>
-                <HStack>
-                  <BsX color="red" size="20px" />
-                  <Text>
-                    "Ich spüre,
-                    dass das Leben mehr bietet. Nur weiß ich nicht, wie ich es
-                    finde."
-                  </Text>
-                </HStack>
-                <HStack>
-                  <BsX color="red" size="20px" />
-                  <Text>
-                    "Ich habe Angst, in 32 Jahren aufzuwachen und alles ist
-                    gleich. Nichts hat sich verändert – <b>ich</b> habe nichts
-                    verändert."
-                  </Text>
-                </HStack>
-                <HStack>
-                  <BsX color="red" size="20px" />
-                  <Text>
-                    "Was sind meine Stärken? Wie kann ich diese besser einsetzen? Was will ich
-                    <b> wirklich</b>?"
-                  </Text>
-                </HStack>
-                <HStack>
-                  <BsX color="red" size="20px" />
-                  <Text>
-                    "Wann finde ich den Mut, endlich richtig durchzustarten?"
-                  </Text>
-                </HStack>
-                <HStack>
-                  <BsX color="red" size="20px" />
-                  <Text>
-                    "Ich möchte mehr erleben, mehr erreichen nur wie schaffe ich das?"
-                  </Text>
-                </HStack>
+                {bulletPoints.map((text, index) => {
+                  return <BulletPoint text={text} key={index} />;
+                })}
               </Stack>
             </Stack>
           </Box>

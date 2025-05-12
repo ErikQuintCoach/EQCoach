@@ -70,7 +70,8 @@ export function Offers({ ...rest }) {
                       verändert.
                     </li>
                     <li>
-                      Ich sehe wie andere Ihren weg gehen und ich will etwas anderes. Ich will mehr als das hier.
+                      Ich sehe, wie andere ihren Weg gehen, und frage mich:
+                      Warum fühlt sich meiner so falsch an?
                     </li>
                     <li>
                       Ich habe keine ehrliche Antwort auf die Frage: Was ist
@@ -78,14 +79,7 @@ export function Offers({ ...rest }) {
                     </li>
                     <li>Ich nutze meine Stärken nicht voll aus.</li>
                     <li>Unsicherheiten und Selbstzweifel stehen mir im Weg.</li>
-                    <li>
-                      Was will ich eigentlich wirklich?
-                    </li>
-                    <li>
-                      Alle scheinen zufrieden zu sein, aber ich spüre,
-                      dass da mehr sein muss. Nur weiß ich nicht, wie ich es
-                      finde.
-                    </li>
+                    <li>Ich frage mich: Was will ich eigentlich wirklich?</li>
                   </ul>
                 </AccordionPanel>
               </AccordionItem>
@@ -94,7 +88,7 @@ export function Offers({ ...rest }) {
                 <h2>
                   <AccordionButton>
                     <Box flex="1" textAlign="left" fontWeight="bold">
-                      Deine Lösung - Free and Energy:
+                      Deine Lösung - Wie Create Your Path dir hilft:
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -102,20 +96,20 @@ export function Offers({ ...rest }) {
                 <AccordionPanel pb={2}>
                   <ul style={{ marginLeft: "1rem", listStyleType: "disc" }}>
                     <li>
-                      <strong>Klarheit:</strong> Ich sehe was ich kann, weiß ich
-                      will und achte was mir wichtig ist.
+                      <strong>Klarheit:</strong> Ich sehe, was ich kann, weiß,
+                      was ich will, und achte, was mir wichtig ist.
                     </li>
                     <li>
-                      <strong>Selbstvertrauen:</strong> Ich fühle, dass ich bin
-                      auf dem richtigen Weg.
+                      <strong>Selbstvertrauen:</strong> Ich fühle mich wohl. Mit
+                      mir, meinen Entscheidungen und meinem Weg.
                     </li>
                     <li>
-                      <strong>Struktur:</strong> Ich weiß welche Schritte ich
-                      nun gehe.
+                      <strong>Struktur:</strong> Ich gehe die richtigen
+                      Schritte.
                     </li>
                     <li>
-                      <strong>Nachhaltigkeit:</strong> Meine Vision ist endlich
-                      teil meines Alltags!
+                      <strong>Nachhaltigkeit:</strong> Meine Vision ist Teil
+                      meines Alltags!
                     </li>
                   </ul>
                 </AccordionPanel>
@@ -132,40 +126,14 @@ export function Offers({ ...rest }) {
                 </h2>
                 <AccordionPanel pb={2}>
                   <Text mb={1}>
-                    <b>3 Monate Betreuung</b>
+                    <b>3 Monate Betreuung + Bonus nach 6 Monaten</b>
                   </Text>
+                  <b>Du findest heraus, wie dein Traumleben</b>
                   <ul style={{ marginLeft: "1rem", listStyleType: "disc" }}>
-                    <li>
-                      <strong>Analyse und Reflexion:</strong> Gemeinsam
-                      betrachten wir deine aktuelle Situation und klären dein
-                      Anliegen (erste Sitzung: 120 Minuten).
-                    </li>
-                    <li>
-                      <strong>Vision und Ziele:</strong> In den Sitzungen 2–6
-                      (60–90 Minuten) entwickeln wir eine Vision, die dich
-                      inspiriert, und setzen konkrete Ziele.
-                    </li>
-                    <li>
-                      <strong>Planung und Umsetzung:</strong> Du nutzt
-                      praktische Tools und Strategien und bleibst im Handeln.
-                    </li>
-                    <li>
-                      <strong>Feedback und Anpassung:</strong> Durch regelmäßige
-                      Check-ins bleibst du auf Kurs.
-                    </li>
-                    <li>
-                      <strong>Konstanter Fortschritt:</strong> Transferaufgaben
-                      ermöglichen nachhaltige Veränderung.
-                    </li>
-                    <li>
-                      <strong>Abschlussplan:</strong> In der letzten Sitzung
-                      reflektieren wir und erstellen deinen
-                      Step-by-Step-Visionsplan.
-                    </li>
-                    <li>
-                      <strong>+1 Sitzung:</strong> Nach drei Monaten schauen
-                      wir, wie sich alles entwickelt hat.
-                    </li>
+                    <li>aussieht</li>
+                    <li>wie es sich anfühlt</li>
+                    <li>wie es Realität wird</li>
+                    <li>du lebst selbstbewusst, klar</li>
                   </ul>
                   <Text mt={1}>
                     Betreuung von Montag bis Samstag über WhatsApp.{" "}
@@ -191,7 +159,10 @@ export function Offers({ ...rest }) {
                     Beratung, sondern ein Coaching-Programm, das auf deine
                     aktive Mitarbeit setzt. Den Unterschied zwischen Coaching
                     und Beratung findest du{" "}
-                    <a href="/coaching-vs-beratung">hier</a>.
+                    <a href="https://akademie-individualpsychologie.ch/psychologische-beratung/">
+                      hier
+                    </a>
+                    .
                   </Text>
                 </AccordionPanel>
               </AccordionItem>
@@ -216,8 +187,13 @@ export function Offers({ ...rest }) {
                     </li>
                   </ul>
                   <Text mt={1}>
-                    Ich begleite und unterstütze dich, aber den Weg musst du
-                    selbst gehen.
+                    Ich begleite dich und unterstütze dich mit 111%! Ich kann
+                    den Weg jedoch nicht für dich gehen.
+                    <br />
+                    <br />
+                    Du fühlst dich angesprochen?
+                    <br />
+                    Dann Let's go!
                   </Text>
                 </AccordionPanel>
               </AccordionItem>

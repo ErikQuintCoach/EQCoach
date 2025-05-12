@@ -23,9 +23,9 @@ export function Header() {
   };
 
   const benefits = [
-    "Erschaffe eine Vision die dich ehrlich motiviert und inspiriert",
-    "Finde deine Stärken, deine Werte und andere Ressourcen",
-    "Erkenne und ersetzte hinderliche Denkmuster",
+    "Motiviert und inspiriert von deiner Mission",
+    "Deine Stärken sind dir klar und du nutzt sie",
+    "Du fühlst dich wohl mit dir",
   ];
 
   return (
@@ -49,7 +49,7 @@ export function Header() {
             backgroundColor={"white"}
             borderTopRadius={["14px", "16px", "16px", "16px"]}
           >
-            TESTKUNDEN GESUCHT
+            Geld-zurück-Garantie
           </Text>
           <Stack
             padding={["8px", "16px", "16px", "16px"]}
@@ -61,8 +61,9 @@ export function Header() {
               fontWeight={"extrabold"}
               fontSize={["22px", "24px", "36px", "36px"]}
             >
-              Create your Path: <br />
-              Klarheit und Selbstentfaltung
+              Lebe deine Mission:
+              <br />
+              Selbstbewusstsein und Klarheit
             </Text>
             <Text
               fontSize={["16px", "16px", "18px", "18px"]}
