@@ -20,6 +20,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useContaxt } from "../context/Context";
+import { useOnSubmitForm } from "../hooks/useOnSubmitForm";
 
 const ContactData = ({ height, width }) => {
   const variant = useBreakpointValue({ base: "base", sm: "sm" });
@@ -129,32 +130,7 @@ export function ContactForm() {
     lg: "lg",
   });
 
-  const onSubmit = async (data) => {
-    const { name, email, message, phone } = data;
-    try {
-      const response = axios.post(
-        `https://erikquint.de/php/contactFormular.php?name=${name}&tel=${phone}&email=${email}&message=${message}`
-      );
-      if (response.data === "Message sent successfully...") {
-        reset();
-        newToast({
-          title: "Danke für ihre Anfrage",
-          message:
-            "Ihre Anfrage wurde versendet, wir melden uns so schnell wie möglich bei Ihnen",
-          status: "success",
-        });
-      } else {
-        newToast({
-          title: "Ein Fehler ist aufgetreten",
-          message:
-            "Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch oder per Email.",
-          status: "error",
-        });
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  };
+  const onSubmit = useOnSubmitForm(reset);
   const contentHeight = 250;
 
   const Header = () => {

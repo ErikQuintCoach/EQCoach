@@ -5,7 +5,6 @@ import { CookieOptIn } from "./CookieOptIn";
 
 export function CookieProvider({ children }) {
   const { cookies } = useContaxt();
-  console.warn("Cookies :", cookies);
   /*   useEffect(() => {
     if (cookies) {
       !(function (f, b, e, v, n, t, s) {
