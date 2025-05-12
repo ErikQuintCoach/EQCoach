@@ -26,8 +26,8 @@ export function MainInfo() {
                 <HStack>
                   <BsX color="red" size="20px" />
                   <Text>
-                    "Alle scheinen halbwegs zufrieden zu sein, aber ich spüre,
-                    dass da mehr sein muss. Nur weiß ich nicht, wie ich es
+                    "Ich spüre,
+                    dass das Leben mehr bietet. Nur weiß ich nicht, wie ich es
                     finde."
                   </Text>
                 </HStack>
@@ -42,21 +42,20 @@ export function MainInfo() {
                 <HStack>
                   <BsX color="red" size="20px" />
                   <Text>
-                    "Was kann ich eigentlich wirklich? Was will ich eigentlich
-                    wirklich?"
+                    "Was sind meine Stärken? Wie kann ich diese besser einsetzen? Was will ich
+                    <b> wirklich</b>?"
                   </Text>
                 </HStack>
                 <HStack>
                   <BsX color="red" size="20px" />
                   <Text>
-                    "Finde ich irgendwann den Mut, endlich etwas zu ändern?"
+                    "Wann finde ich den Mut, endlich richtig durchzustarten?"
                   </Text>
                 </HStack>
                 <HStack>
                   <BsX color="red" size="20px" />
                   <Text>
-                    "Ich sehe, wie andere ihren Weg gehen, und frage mich: Warum
-                    fühlt sich meiner so falsch an?"
+                    "Ich möchte mehr erleben, mehr erreichen nur wie schaffe ich das?"
                   </Text>
                 </HStack>
               </Stack>
