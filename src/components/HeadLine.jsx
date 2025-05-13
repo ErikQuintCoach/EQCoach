@@ -14,7 +14,6 @@ export function HeadLine({
     md: "md",
     lg: "lg",
   });
-  //console.warn(variant);
 
   return (
     <Center {...rest}>

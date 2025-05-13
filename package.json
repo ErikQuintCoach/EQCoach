@@ -8,10 +8,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "clean:images": "node scripts/cleanup-unused-images.js",
-    "generate:sitemap": "node scripts/generate-sitemap.js",
-    "deploy": "npm run clean:images && npm run generate:sitemap && npm run build",
+    "deploy": "webwerk deploy --ci",
     "preview": "vite preview"
+  },
+  "webwerk": {
+    "imagesDir": "src/images",
+    "publicDir": "public",
+    "checks": {
+      "imageCompressionThreshold": 80
+    },
+    "sitemap": {
+      "domain": "https://erikquint.de",
+      "mainFile": "src/main.jsx",
+      "output": "public/sitemap.xml"
+    }
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
@@ -38,6 +48,7 @@
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
+    "@webwerk-am-meer/webwerk-cli": "^1.1.6",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
