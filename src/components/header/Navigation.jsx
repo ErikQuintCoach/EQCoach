@@ -64,7 +64,14 @@ export function Navigation({ refs }) {
             <ActionButton h={"50px"} fontSize={"13px"} />
           </>
         ) : (
-          <BurgerMenu refs={refs} executeScroll={(val) => executeScroll(val)} />
+          <>
+            {false ? (
+              <BurgerMenu
+                refs={refs}
+                executeScroll={(val) => executeScroll(val)}
+              />
+            ) : null}
+          </>
         )}
       </HStack>
     </>

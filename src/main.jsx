@@ -12,7 +12,7 @@ import {
   surveyContent,
   surveyThankYouContent,
 } from "./components/landing-pages/page-definitions/refferal/surveyContent.jsx";
-import { CookieProvider } from "./components/cookies/CookieProvider.jsx";
+import { ConsentProvider } from "./components/consent/ConsentProvider.jsx";
 import { PlaceholderApp } from "./PlaceholderApp.jsx";
 // Hier den Inhalt für die neue Landing Page reinladen (siehe Beispielhaft "surveyContent")
 
@@ -65,9 +65,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider>
       <ContextProvider>
-        <CookieProvider>
+        <ConsentProvider>
           <RouterProvider router={router} />
-        </CookieProvider>
+        </ConsentProvider>
       </ContextProvider>
     </ChakraProvider>
   </React.StrictMode>

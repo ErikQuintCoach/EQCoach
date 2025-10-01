@@ -1,0 +1,1 @@
+export const consentText = `Wir möchten unser Leistungsangebote auf Ihre Bedürfnisse anpassen. Zu diesem Zweck setzen wir sog. Cookies ein. Weitere Informationen bezüglich Art der Cookies, Datenspeicherung, etc. erhältst Du in unserer Datenschutzerklärung.`;

@@ -1,5 +1,5 @@
 export const services = [
-  {
+  /*   {
     name: "Start",
     ref: "header",
   },
@@ -22,5 +22,5 @@ export const services = [
   {
     name: "Qualifikation",
     ref: "qualification",
-  },
+  }, */
 ];
