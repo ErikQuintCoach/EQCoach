@@ -13,11 +13,12 @@ import {
   surveyThankYouContent,
 } from "./components/landing-pages/page-definitions/refferal/surveyContent.jsx";
 import { CookieProvider } from "./components/cookies/CookieProvider.jsx";
+import { PlaceholderApp } from "./PlaceholderApp.jsx";
 // Hier den Inhalt für die neue Landing Page reinladen (siehe Beispielhaft "surveyContent")
 
 const router = createBrowserRouter([
-  { path: "*", element: <App /> },
-  { path: "/", element: <App /> },
+  { path: "*", element: <PlaceholderApp /> },
+  { path: "/", element: <PlaceholderApp /> },
   /*Hier eine neue Route anlegen*/
   /*
   Beispiel Landing Page Route:
