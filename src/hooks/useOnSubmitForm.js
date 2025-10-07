@@ -39,27 +39,29 @@ export function useOnSubmitForm(reset) {
     `;
 
     try {
-      const domain = import.meta.env.VITE_MAILGUN_DOMAIN;
-      const apiKey = import.meta.env.VITE_MAILGUN_API_KEY;
-      const endpoint = `https://api.eu.mailgun.net/v3/${domain}/messages`;
-      const auth = btoa(`api:${apiKey}`);
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
 
-      const form = new URLSearchParams();
-      form.append("from", `Bewerbung <postmaster@${domain}>`);
-      form.append("to", "moin@erikquint.de");
-      form.append("subject", "Neue Kontaktanfrage von der Webseite");
-      form.append("html", html);
-
-      const response = await axios.post(endpoint, form, {
-        headers: {
-          Authorization: `Basic ${auth}`,
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        timeout: 10000,
+      const raw = JSON.stringify({
+        html: html,
+        subject: `Neue Kontaktanfrage von der Webseite`,
+        to: "moin@erikquint.de",
       });
 
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+
+      const response = await fetch(
+        "https://customermail.webwerk-am-meer.de/api/v1/mails/send",
+        requestOptions
+      );
+
       // 7) Erfolg / Fehler behandeln
-      if (response.status === 200) {
+      if (response.ok) {
         reset({ name: "", email: "", message: "", phone: "" });
         newToast({
           title: "Danke für Ihre Anfrage",
@@ -68,10 +70,10 @@ export function useOnSubmitForm(reset) {
           status: "success",
         });
       } else {
-        throw new Error(`Mailgun HTTP ${response.status}`);
+        throw new Error(`Mail HTTP ${response.status}`);
       }
     } catch (err) {
-      console.error("Mailgun-Fehler:", err);
+      console.error("Mail-Fehler:", err);
       newToast({
         title: "Ein Fehler ist aufgetreten",
         message:

@@ -96,13 +96,11 @@ export function PlaceholderApp() {
                 >
                   Hinweis
                 </Badge>
-                <Heading size="md">
-                  Wir strukturieren unsere Angebote um
-                </Heading>
+                <Heading size="md">Ich strukturiere meine Angebote um</Heading>
                 <Text color={descColor} fontSize="md">
-                  Aktuell arbeiten wir daran, unsere Angebote umzustrukturieren.
+                  Aktuell arbeite ich daran, meine Angebote umzustrukturieren.
                   Solltest du Hilfe benötigen oder einen Termin vereinbaren
-                  wollen, melde dich bitte unter unserer Telefonnummer:
+                  wollen, melde dich bitte unter meiner Telefonnummer:
                 </Text>
                 <HStack spacing={4}>
                   <Button
